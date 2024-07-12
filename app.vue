@@ -1,13 +1,13 @@
 <template>
-  <div class="flex items-center justify-center h-screen bg-gray-900">
-    <div class="relative p-[3px] rounded-lg shadow-xl transition-shadow duration-300 ease-in-out">
+  <div class="flex items-center justify-center min-h-screen bg-black p-4">
+    <div class="relative p-[3px] rounded-lg shadow-xl transition-shadow duration-300 ease-in-out w-full max-w-md">
       <div class="absolute inset-0 rounded-lg blur-sm ambient-gradient"></div>
       <div class="absolute inset-0 rounded-lg ambient-gradient"></div>
-      <div class="relative z-10 pt-8 pl-8 pr-8 bg-gray-900 rounded-lg">
-        <div class="flex flex-col items-center space-y-2 h-[600px] w-[600px]">
-          <img src="/images/TWALogo.jpg" alt="">
-          <span class="text-2xl text-gray-300 font-mono">The Web Agency</span>
-          <h1 class="text-4xl font-bold font-mono text-white text-center">
+      <div class="relative z-10 p-6 bg-black rounded-lg">
+        <div class="flex flex-col items-center space-y-4">
+          <img src="/images/TWALogo.jpg" alt="The Web Agency Logo" class="w-full max-w-[200px] h-auto">
+          <span class="text-xl sm:text-2xl text-gray-300 font-mono">The Web Agency</span>
+          <h1 class="text-3xl sm:text-4xl font-bold font-mono text-white text-center">
             Coming Soon...
           </h1>
         </div>
