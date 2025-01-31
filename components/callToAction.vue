@@ -4,12 +4,10 @@
 
 <template>
 
-  <div class="text-white text-2xl justify-start px-40">
-    Don't worry about the hassles of web development, we got you covered.
+  <div class="text-white text-md justify-start px-40">
+    Tailored solutions that make your brand grow. Helping businesses of all sizes reach their full online potential.
   </div>
 
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
