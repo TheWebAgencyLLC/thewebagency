@@ -1,9 +1,9 @@
 <template>
     <div class="fixed top-0 flex justify-center w-full z-50 font-jetbrains">
         <!-- Logo container -->
-        <div class="absolute left-4 mt-4 h-24 w-24">
+        <NuxtLink class="absolute left-4 mt-4 h-24 w-24">
             <img src="/images/TWALogo-Photoroom.png" alt="The Web Agency Logo">
-        </div>
+        </NuxtLink>
 
         <!-- Navigation container -->
         <nav class="transition-all duration-1000 ease-in-out mt-8" :class="[isScrolled
@@ -22,21 +22,22 @@
 
                 <!-- CTA buttons -->
                 <div class="flex items-center space-x-4">
-                    <button
+                    <NuxtLink to="/portfolio"
                         class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full overflow-hidden"
                         :class="{ 'translate-x-0 opacity-100 duration-1000': isScrolled, 'translate-x-full duration-300 ease-in-out opacity-0': !isScrolled }">
                         <span
                             class="block px-4 py-2 bg-black rounded-full text-white text-sm hover:bg-opacity-95 transition-all duration-300">
                             Portfolio
                         </span>
-                    </button>
+                    </NuxtLink>
 
-                    <button class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full">
+                    <NuxtLink to="/contact"
+                        class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full">
                         <span
                             class="block px-4 py-2 text-white text-sm rounded-full hover:bg-black transition-all duration-300">
                             Contact Us
                         </span>
-                    </button>
+                    </NuxtLink>
                 </div>
             </div>
         </nav>

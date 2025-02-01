@@ -7,10 +7,10 @@
     </div>
 
     <!-- Hero Section Container -->
-    <div class="flex flex-col items-center justify-center min-h-screen bg-black p-4 space-y-8">
+    <div class="flex flex-col items-center min-h-screen bg-black p-4 space-y-8 pt-48">
       <HeroSection />
       <CallToAction />
-      <ColoredStripes />
+      <SocialProofLogos class="opacity-0 animate-fade-up animation-delay-800" />
       <DotPattern
         class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)]" />
     </div>
@@ -24,8 +24,8 @@
   </div>
 </template>
 
-<script>
-
+<script setup>
+import AppHeader from '~/components/layout/appHeader.vue'
 </script>
 
 <style scoped>
