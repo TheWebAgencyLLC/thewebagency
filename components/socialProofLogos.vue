@@ -15,16 +15,19 @@ const logos = [
 </script>
 
 <template>
-    <div class="w-full overflow-hidden bg-black/40 backdrop-blur-sm py-8 mt-16">
+    <div class="w-full overflow-hidden py-8 mt-16">
         <div class="relative">
-            <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+            <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black/50 to-transparent z-10"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black/50 to-transparent z-10"></div>
 
             <div class="flex animate-scroll">
                 <div class="flex space-x-16 items-center px-8">
                     <div v-for="logo in logos" :key="logo.id"
-                        class="flex items-center justify-center min-w-[120px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
-                        <img :src="logo.path" :alt="logo.name" class="h-8">
+                        class="flex items-center justify-center min-w-[120px] opacity-80 hover:opacity-100 transition-all duration-300">
+                        <img :src="logo.path" :alt="logo.name" :class="{
+                            'h-12 w-auto object-contain': true,
+                            'scale-150': logo.path.includes('logo_img2.webp') // Scale up specifically for logo_img2
+                        }">
                     </div>
                 </div>
             </div>
