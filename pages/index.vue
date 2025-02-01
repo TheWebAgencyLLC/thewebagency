@@ -1,50 +1,46 @@
 <template>
-    <div class="flex items-center justify-center min-h-screen bg-black p-4">
-        <div class="relative p-[3px] rounded-lg shadow-xl transition-shadow duration-300 ease-in-out w-full max-w-md">
-            <div class="absolute inset-0 rounded-lg blur-sm ambient-gradient"></div>
-            <div class="absolute inset-0 rounded-lg ambient-gradient"></div>
-            <div class="relative z-10 p-6 bg-black rounded-lg">
-                <div class="flex flex-col items-center space-y-4">
-                    <img src="/images/TWALogo.jpg" alt="The Web Agency Logo" class="w-full max-w-[200px] h-auto">
-                    <span class="text-xl sm:text-2xl text-gray-300 font-mono">The Web Agency</span>
-                    <h1 class="text-3xl sm:text-4xl font-bold font-mono text-white text-center">
-                        Coming Soon...
-                    </h1>
-                </div>
-            </div>
-        </div>
+  <div>
+    <AppHeader />
+    <div
+      class="absolute -top-8 left-1/2 size-48 md:size-72 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#E70D01]/20 via-[#FF5400]/20 to-[#F77D05]/20 blur-[80px] md:blur-[120px] lg:top-[20rem] lg:size-[26rem] lg:blur-[200px]">
     </div>
+
+    <div class="flex flex-col items-center min-h-screen bg-black p-4 space-y-6 md:space-y-8 pt-24 md:pt-48">
+      <HeroSection />
+      <CallToAction />
+      <SocialProofLogos class="opacity-0 animate-fade-up animation-delay-2000" />
+      <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)]" />
+    </div>
+
+    <div class="bg-black text-white">
+      <section class="min-h-screen flex items-center justify-center p-8">
+      </section>
+    </div>
+  </div>
 </template>
 
-<script>
-export default {
-    name: 'ComingSoon'
-}
+<script setup>
+import AppHeader from '~/components/layout/appHeader.vue'
 </script>
 
 <style scoped>
-.ambient-gradient {
-    background: linear-gradient(90deg,
-            #ff00ff,
-            #00ff00,
-            #00ffff,
-            #ff0000,
-            #ff00ff);
-    background-size: 400% 400%;
-    animation: ambientRotate 10s ease infinite;
+* {
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
-@keyframes ambientRotate {
-    0% {
-        background-position: 0% 50%;
-    }
+.opacity-0 {
+  opacity: 0;
+}
 
-    50% {
-        background-position: 100% 50%;
-    }
+.animate-fade-up {
+  animation-fill-mode: forwards;
+}
 
-    100% {
-        background-position: 0% 50%;
-    }
+.animation-delay-2000 {
+  animation-delay: 2000ms;
 }
 </style>
