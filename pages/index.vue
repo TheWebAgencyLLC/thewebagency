@@ -10,12 +10,14 @@
       <DotPattern
         class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
 
-      <div class="relative flex flex-col items-center min-h-screen p-4 space-y-6 md:space-y-8 pt-24 md:pt-48">
-        <HeroSection />
-        <CallToAction />
-        <!-- <SocialProofLogos class="opacity-0 animate-fade mt-auto mb-8 animation-delay-1000" /> -->
+      <div class="relative flex flex-col items-center min-h-[90vh] p-4 space-y-6 md:space-y-8 pt-24 md:pt-48">
+        <HeroSection :isScrolled="isScrolled" />
+        <CallToAction :isScrolled="isScrolled" />
+        <CtaFeatures :isScrolled="isScrolled" />
+        <!-- <SocialProofLogos class="opacity-0 animate-fade mt-auto pb-12 animation-delay-1000" :isScrolled="isScrolled" /> -->
       </div>
     </div>
+
 
     <div class="bg-black text-white">
       <section class="min-h-screen flex items-center justify-center p-8">
@@ -26,6 +28,23 @@
 
 <script setup>
 import AppHeader from '~/components/layout/appHeader.vue'
+import SocialProofLogos from '~/components/socialProofLogos.vue'
+
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const isScrolled = ref(false)
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style scoped>
@@ -46,5 +65,19 @@ import AppHeader from '~/components/layout/appHeader.vue'
 
 .animation-delay-2000 {
   animation-delay: 2000ms;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fade 0.5s ease-out forwards;
 }
 </style>
