@@ -53,7 +53,7 @@
                 <a v-for="link in links" :key="link" href="#" class="text-gray-400 hover:text-white">
                     {{ link }}
                 </a>
-                <NuxtLink to="" class="text-gray-400 hover:text-white">Portfolio</NuxtLink>
+                <NuxtLink to="" class="text-gray-400 hover:text-white">The Team</NuxtLink>
                 <NuxtLink to="" class="text-[#E70D01] hover:text-[#FF5400]">Contact Us</NuxtLink>
             </div>
         </div>
@@ -125,5 +125,13 @@ onUnmounted(() => {
     opacity: 0.2;
     border-radius: inherit;
     pointer-events: none;
+}
+
+button svg {
+    transition: transform 0.2s ease;
+}
+
+button:hover svg {
+    transform: scale(1.1);
 }
 </style>

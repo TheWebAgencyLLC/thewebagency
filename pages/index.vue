@@ -14,7 +14,7 @@
         <HeroSection :isScrolled="isScrolled" />
         <CallToAction :isScrolled="isScrolled" />
         <CtaFeatures :isScrolled="isScrolled" />
-        <!-- <SocialProofLogos class="opacity-0 animate-fade mt-auto pb-12 animation-delay-1000" :isScrolled="isScrolled" /> -->
+        <!-- <SocialProofLogos class="opacity-0 animate-fade animation-delay-1000 pt-24" :isScrolled="isScrolled" /> -->
       </div>
     </div>
 
