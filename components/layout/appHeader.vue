@@ -1,7 +1,7 @@
 <template>
     <div class="fixed top-0 flex justify-center w-full z-50 font-jetbrains">
         <!-- Logo container -->
-        <NuxtLink class="absolute left-4 mt-4 h-16 w-16 md:h-24 md:w-24">
+        <NuxtLink to="/" class="absolute left-4 mt-4 h-16 w-16 md:h-24 md:w-24 z-[60]">
             <img src="/images/TWALogo-Photoroom.png" alt="The Web Agency Logo">
         </NuxtLink>
 
