@@ -19,13 +19,22 @@
       />
       <form
         name="contact"
-        class="w-full flex flex-col justify-center items-center space-y-5"
+        method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        method="POST"
+        class="w-full flex flex-col justify-center items-center space-y-5"
       >
-        <!--        THIS MAKES NETLIFY CRASH FOR SOME UNGODLY REASON, GOOD LUCK.-->
-        <!--        <input type="hidden" name="form-name" value="contact" />-->
+        <!-- Hidden input for Netlify to identify the form -->
+        <input type="hidden" name="form-name" value="contact" />
+
+        <!-- Honeypot field (this field is hidden and helps prevent spam) -->
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you're human:
+            <input name="bot-field" />
+          </label>
+        </p>
+
         <!-- Full Name Field -->
         <div class="w-full lg:w-1/2 flex flex-col mt-10 space-y-2">
           <label for="fullName">Full Name</label>
