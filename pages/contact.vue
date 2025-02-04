@@ -18,6 +18,7 @@
         class="w-full lg:w-1/2 mt-10 bg-gradient-to-r from-gray-500 via-gray-500 to-gray-500"
       />
       <form
+        name="contact"
         action=""
         class="w-full flex flex-col justify-center items-center space-y-5"
         netlify
