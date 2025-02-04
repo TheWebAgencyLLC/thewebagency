@@ -24,6 +24,7 @@
         data-netlify-honeypot="bot-field"
         method="POST"
       >
+        <input type="hidden" name="from-name" value="contact" />
         <!-- Full Name Field -->
         <div class="w-full lg:w-1/2 flex flex-col mt-10 space-y-2">
           <label for="fullName">Full Name</label>
@@ -73,6 +74,7 @@
 
         <!-- Button: full width on mobile, half width on desktop -->
         <button
+          type="submit"
           class="w-full lg:w-1/2 rounded-md text-lg font-semibold py-3 px-6 bg-gradient-to-r from-[#E70D01]/70 via-[#FF5400]/50 to-[#F77D05]/70 hover:from-[#E70D01] hover:via-[#FF5400] hover:to-[#F77D05] transition-colors duration-1000"
         >
           Send Inquiry
