@@ -21,7 +21,9 @@
         name="contact"
         action=""
         class="w-full flex flex-col justify-center items-center space-y-5"
-        netlify
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        method="POST"
       >
         <!-- Full Name Field -->
         <div class="w-full lg:w-1/2 flex flex-col mt-10 space-y-2">
