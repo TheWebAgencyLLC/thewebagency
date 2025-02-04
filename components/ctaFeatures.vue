@@ -13,7 +13,7 @@ defineProps({
         <div
             class="flex justify-center items-center text-white gap-8 text-xl font-light opacity-0 animate-fade-up animation-delay-400">
             <div class="flex space-x-4">
-                <NuxtLink to=""
+                <NuxtLink to="/contact"
                     class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full cursor-pointer">
                     <span
                         class="block px-4 py-2 text-white text-sm rounded-full hover:bg-black transition-all duration-300">
