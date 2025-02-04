@@ -24,7 +24,8 @@
         data-netlify-honeypot="bot-field"
         method="POST"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <!--        THIS MAKES NETLIFY CRASH FOR SOME UNGODLY REASON, GOOD LUCK.-->
+        <!--        <input type="hidden" name="form-name" value="contact" />-->
         <!-- Full Name Field -->
         <div class="w-full lg:w-1/2 flex flex-col mt-10 space-y-2">
           <label for="fullName">Full Name</label>
