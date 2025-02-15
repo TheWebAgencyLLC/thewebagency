@@ -68,7 +68,7 @@ const isScrolled = ref(false)
 const links = ['Client Work', 'Solutions', 'Our Story']
 
 const handleScroll = () => {
-    isScrolled.value = window.scrollY > 50
+    isScrolled.value = window.scrollY > 150
 }
 
 onMounted(() => {

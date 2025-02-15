@@ -62,15 +62,8 @@ defineProps({
       </div>
     </div>
 
-    <div class="flex flex-col items-center text-sm justify-center mb-6 md:mb-8">
-      <span
-        class="opacity-0 animate-fade-up animation-delay-0 text-xs md:text-md lg:text-lg text-gray-300 bg-black/40 p-2 px-4 md:px-6 border border-gray-800 shadow-inner backdrop-blur-sm rounded-full xl:mb-0 mb-2 tracking-wide">
-        All your business website needs, in one place
-      </span>
-    </div>
-
     <div
-      class="text-white text-3xl md:text-4xl lg:text-5xl tracking-tighter opacity-0 animate-fade-up animation-delay-200 text-center px-4 md:px-0">
+      class="text-white mt-8 text-3xl md:text-4xl lg:text-5xl tracking-tighter opacity-0 animate-fade-up animation-delay-200 text-center px-4 md:px-0">
       &lt;Modern Websites <span class="text-[#E70D01]">Built</span> <span class="text-[#FF5400]">To</span> <span
         class="text-[#F77D05]">Grow Your Business/&gt;</span>
     </div>
