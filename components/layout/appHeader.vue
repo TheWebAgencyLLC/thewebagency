@@ -23,7 +23,7 @@
                         <span class="link-underline"></span>
                     </NuxtLink>
                 </div>
-                <NuxtLink to="/pricing"
+                <NuxtLink to="/work"
                     class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full cursor-pointer">
                     <span
                         class="block px-4 py-2 text-white text-sm rounded-full hover:bg-black transition-all duration-300">
@@ -44,7 +44,7 @@
                             class="text-gray-400 hover:text-white py-2 transition-colors duration-200 cursor-pointer">
                             {{ link }}
                         </NuxtLink>
-                        <NuxtLink to="/team"
+                        <NuxtLink to="/about"
                             class="text-gray-400 hover:text-white py-2 transition-colors duration-200 cursor-pointer">
                             The Team
                         </NuxtLink>
@@ -63,7 +63,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const isMenuOpen = ref(false)
-const links = ['Client Work', 'Solutions', 'Our Story']
+const links = ['Work', 'About']
 
 const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value
