@@ -9,12 +9,10 @@ defineProps({
 </script>
 
 <template>
-    <!-- Mobile Version - Always Visible -->
     <div class="relative block md:hidden text-center">
         <section class="py-12">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="grid grid-cols-1 gap-8">
-                    <!-- Left Text Column -->
                     <div class="space-y-6 mt-6">
                         <h2 class="text-3xl text-white font-light leading-tight">
                             Driving Organic Growth Through SEO Excellence
@@ -24,9 +22,7 @@ defineProps({
                         </p>
                     </div>
 
-                    <!-- Cards Column -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- Organic Traffic Card -->
                         <div class="bg-gradient-to-br from-[#E70D01] to-[#F77D05] p-6 rounded-3xl">
                             <h3 class="text-xl text-white font-medium mb-3">
                                 Organic Traffic Growth
@@ -36,13 +32,12 @@ defineProps({
                             </p>
                         </div>
 
-                        <!-- Conversion Card -->
                         <div class="bg-black/40 backdrop-blur-sm border border-[#F77D05]/20 p-6 rounded-3xl">
                             <h3 class="text-xl text-white font-medium mb-3">
                                 Conversion Optimization
                             </h3>
                             <p class="text-white/80 text-sm">
-                                Turn visitors into customers with data-backed conversion strategies
+                                Turn visitors into customers with proven conversion strategies
                             </p>
                         </div>
                     </div>
@@ -51,14 +46,12 @@ defineProps({
         </section>
     </div>
 
-    <!-- Desktop Version - With Scroll Animation -->
     <div class="relative hidden md:block"
         :class="{ 'opacity-100': isScrolled, 'opacity-0 -translate-y-12': !isScrolled }"
         style="transition: opacity 0.5s ease-out, transform 0.5s ease-out">
         <section class="relative -mt-48 md:-mt-64">
             <div class="max-w-7xl mx-auto px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Left Text Column -->
                     <div class="space-y-6">
                         <h2 class="text-4xl md:text-5xl text-white font-light leading-tight">
                             Driving Organic Growth Through SEO Excellence
@@ -68,9 +61,7 @@ defineProps({
                         </p>
                     </div>
 
-                    <!-- Right Cards Column -->
                     <div class="grid grid-cols-2 gap-4">
-                        <!-- Organic Traffic Card -->
                         <div class="bg-gradient-to-br from-[#E70D01] to-[#F77D05] p-6 rounded-3xl">
                             <h3 class="text-xl text-white font-medium mb-3">
                                 Organic Traffic Growth
@@ -80,13 +71,12 @@ defineProps({
                             </p>
                         </div>
 
-                        <!-- Conversion Card -->
                         <div class="bg-black/40 backdrop-blur-sm border border-[#F77D05]/20 p-6 rounded-3xl">
                             <h3 class="text-xl text-white font-medium mb-3">
                                 Conversion Optimization
                             </h3>
                             <p class="text-white/80 text-sm">
-                                Turn visitors into customers with data-backed conversion strategies
+                                Turn visitors into customers with proven conversion strategies
                             </p>
                         </div>
                     </div>

@@ -8,7 +8,6 @@ defineProps({
 </script>
 
 <template>
-    <!-- Mobile Version - No Animations -->
     <div class="block md:hidden">
         <div class="flex justify-center items-center text-white gap-8 text-xl font-light">
             <div class="flex space-x-4">

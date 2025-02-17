@@ -15,40 +15,41 @@
         <CallToAction :isScrolled="isScrolled" />
         <CtaFeatures :isScrolled="isScrolled" />
 
-        <div class="flex flex-col items-center text-sm justify-center mb-6 md:hidden">
-          <!-- Changed md:mb-8 to md:hidden -->
+        <div class="flex flex-col items-center text-sm justify-center mb-6 md:hidden animate-fade-up">
           <span
-            class="opacity-0 animate-fade-up animation-delay-0 text-xs text-gray-300 bg-black/40 p-2 px-4 border border-gray-800 mt-16 shadow-inner backdrop-blur-sm rounded-full mb-2 tracking-wide">
+            class="opacity-0 animate-fade-up animation-delay-0 text-xs text-white p-2 px-4 border border-gray-800 mt-16 shadow-inner backdrop-blur-sm rounded-full mb-2 tracking-wide">
             All your business website needs, in one place
           </span>
         </div>
-        <!-- <SocialProofLogos class="opacity-0 animate-fade animation-delay-1000 pt-24" :isScrolled="isScrolled" /> -->
       </div>
     </div>
 
-    <div class="relative -mt-48 md:-mt-64"> <!-- Negative margin to pull it up -->
+    <div class="relative -mt-48 md:-mt-64">
+      <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
       <SeoSection :isScrolled="isScrolled" />
     </div>
 
-    <section class="relative py-24">
-      <div class="max-w-7xl mx-auto px-4"> <!-- Reduced from 5xl to 4xl -->
-        <!-- Header -->
-        <div class="text-center mb-12"> <!-- Reduced from mb-20 -->
-          <h2 class="text-4xl lg:text-5xl text-white tracking-tighter mb-4 font-mono"> <!-- Reduced mb-6 to mb-4 -->
+    <DividerLine />
+
+    <section class="relative py-12">
+      <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl lg:text-5xl text-white tracking-tighter mb-4 font-mono">
             Not Just Your Partners,<br>Your Success Team
           </h2>
           <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed font-mono text-sm">
-            <!-- Added text-sm, reduced max-w-3xl to max-w-2xl -->
             When you win, we win. We dive deep into your vision, pushing the boundaries of modern design and
             development. Every iteration, every solution, every breakthrough is fueled by our investment in your
             success.
           </p>
         </div>
 
-        <!-- Cards Grid -->
         <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
           <div v-for="(card, index) in capabilities" :key="index"
-            class="group p-4 rounded-2xl border border-white bg-black/40 backdrop-blur-sm hover:bg-black/60 transition-all duration-300"
+            class="group p-4 rounded-2xl border border-white bg-transparent"
             :class="`animate-fade-up animation-delay-${index * 200}`">
             <div class="relative rounded-lg w-fit" style="padding: 8px; margin-bottom: 12px;"
               :class="`text-[${gradientColors[index % 3]}]`">
@@ -62,27 +63,34 @@
       </div>
     </section>
 
+    <DividerLine />
+
     <SocialProofLogos />
-    <section ref="aiSectionRef" class="relative py-24 fade-in">
+    <section ref="aiSectionRef" class="relative py-12 fade-in">
+      <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
       <div class="max-w-3xl mx-auto px-4 text-center">
-        <p class="text-xl md:text-2xl leading-relaxed text-gray-300">
-          <span class="text-gradient">AI isn't just a buzzword here</span>—it's your competitive advantage.
+        <p class="text-xl md:text-2xl leading-relaxed text-gray-300 max-w-[90%] md:max-w-full mx-auto">
+          <span class="text-gradient">AI isn't just a buzzword here</span>&mdash;it's your competitive advantage.
           By integrating <span class="text-gradient">artificial intelligence</span> into our development workflow,
-          we dramatically <span class="text-gradient">reduce timelines</span> while elevating quality. From rapid
-          prototyping to intelligent testing,
-          we're bringing tomorrow's web development capabilities to your project
-          today.
+          we dramatically <span class="text-gradient">reduce timelines</span> while elevating quality.
+          From rapid prototyping to intelligent testing, we're bringing tomorrow's web development capabilities to your
+          project today.
         </p>
       </div>
     </section>
 
-    <section class="relative py-24">
+    <DividerLine />
+
+    <section class="relative py-12">
+      <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Header section -->
         <div class="mb-12 relative">
-          <div class="absolute -right-2 font-mono text-xl text-[#F77D05]">›_</div>
           <div class="flex items-center gap-3">
             <div class="relative">
+              <DotPattern
+                class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
               <div class="w-8 h-8 rounded-full border border-gray-600"></div>
               <div
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#F77D05]">
@@ -96,78 +104,52 @@
           </p>
         </div>
 
-        <!-- Bento Grid -->
         <div class="relative">
-          <div class="absolute -bottom-2 -left-2 font-mono text-xl text-[#F77D05]">›_</div>
-          <div class="absolute -bottom-2 -right-2 font-mono text-xl text-[#F77D05]">›_</div>
+          <DotPattern
+            class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
           <div class="px-4 pb-8">
-            <!-- Mobile Layout -->
             <div class="grid md:hidden gap-4">
-              <!-- Large boxes -->
-              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px]">
-                <!-- Box 1 content -->
+              <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px]">
               </div>
-              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px]">
-                <!-- Box 2 content -->
+              <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px]">
               </div>
-              <!-- Medium boxes -->
-              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px]">
-                <!-- Box 3 content -->
+              <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px]">
               </div>
-              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px]">
-                <!-- Box 4 content -->
+              <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px]">
               </div>
-              <!-- Tall box -->
-              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[250px]">
-                <!-- Box 5 content -->
+              <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[250px]">
               </div>
-              <!-- Small boxes -->
-              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
-                <!-- Box 6 content -->
+              <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
               </div>
-              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
-                <!-- Box 7 content -->
+              <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
               </div>
-              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
-                <!-- Box 8 content -->
+              <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
               </div>
             </div>
 
-            <!-- Desktop Layout -->
             <div class="hidden md:grid grid-cols-12 gap-4 auto-rows-[100px]">
-              <!-- Row 1: Two equal large boxes -->
-              <div class="col-span-6 row-span-2 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
-                <!-- First large box -->
+              <div class="col-span-6 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm">
               </div>
 
-              <div class="col-span-6 row-span-2 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
-                <!-- Second large box -->
+              <div class="col-span-6 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm">
               </div>
 
-              <!-- Row 2: Two medium boxes and one large box -->
-              <div class="col-span-3 row-span-2 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
-                <!-- First medium box -->
+              <div class="col-span-3 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm">
               </div>
 
-              <div class="col-span-3 row-span-2 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
-                <!-- Second medium box -->
+              <div class="col-span-3 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm">
               </div>
 
-              <div class="col-span-6 row-span-4 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
-                <!-- Large tall box -->
+              <div class="col-span-6 row-span-4 rounded-3xl p-6 border border-white backdrop-blur-sm">
               </div>
 
-              <!-- Row 3: Three small boxes -->
-              <div class="col-span-2 row-span-2 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
-                <!-- Small box 1 -->
+              <div class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm">
               </div>
 
-              <div class="col-span-2 row-span-2 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
-                <!-- Small box 2 -->
+              <div class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm">
               </div>
 
-              <div class="col-span-2 row-span-2 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
-                <!-- Small box 3 -->
+              <div class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm">
               </div>
             </div>
           </div>
@@ -175,10 +157,13 @@
       </div>
     </section>
 
-    <section class="relative py-24">
+    <DividerLine />
+
+    <section class="relative py-12">
+      <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
       <div class="max-w-6xl mx-auto px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Testimonial 1 -->
           <div class="flex gap-6">
             <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#E70D01] to-[#F77D05] flex-shrink-0"></div>
             <div>
@@ -188,7 +173,6 @@
               <p class="text-sm text-gray-400">CEO, Tech Company</p>
             </div>
           </div>
-          <!-- Testimonial 2 -->
           <div class="flex gap-6">
             <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#FF5400] to-[#F77D05] flex-shrink-0"></div>
             <div>
@@ -202,7 +186,11 @@
       </div>
     </section>
 
-    <section ref="bigIdeasSectionRef" class="relative py-24 bg-black/20 fade-in">
+    <DividerLine />
+
+    <section ref="bigIdeasSectionRef" class="relative py-12 bg-black/20 fade-in">
+      <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
       <div class="max-w-3xl mx-auto px-8 text-center">
         <p class="text-3xl md:text-4xl font-light leading-relaxed text-white">
           <span class="text-gradient">Big ideas</span> energize us. Exceptional results <span
@@ -212,9 +200,12 @@
       </div>
     </section>
 
-    <section class="relative py-24 overflow-hidden">
+    <DividerLine />
+
+    <section class="relative py-12 overflow-hidden">
+      <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
       <div class="max-w-6xl mx-auto px-8">
-        <!-- Background with curved lines -->
         <div class="absolute inset-0 bg-gradient-to-br from-[#E70D01]/10 to-transparent">
           <div class="absolute bottom-0 left-0 right-0">
             <svg viewBox="0 0 400 100" class="w-full">
@@ -251,7 +242,6 @@
     </section>
 
     <footer class="relative py-16 overflow-hidden">
-      <!-- Gradient Background Effect -->
       <div class="absolute inset-0 z-0">
         <div class="absolute top-0 left-1/2 w-[1200px] h-[1200px] -translate-x-1/2 rounded-full 
            bg-gradient-to-r from-[#E70D01]/20 via-[#FF5400]/15 to-[#F77D05]/15
@@ -259,17 +249,14 @@
         </div>
       </div>
 
-      <!-- Footer Content -->
       <div class="relative z-10 max-w-7xl mx-auto px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <!-- Logo & Social Section -->
           <div class="space-y-6">
             <div class="flex items-center gap-3">
               <img src="/public/images/TWALogo-Photoroom.png" alt="The Web Agency" class="w-16 h-16">
               <span class="text-white font-mono">TheWebAgency</span>
             </div>
 
-            <!-- Social Links -->
             <div class="flex gap-4 md:pl-2">
               <a href="#"
                 class="p-2 bg-black/40 backdrop-blur-sm rounded-lg border border-gray-800/50 hover:-translate-y-1 transition-transform">
@@ -298,7 +285,6 @@
             </div>
           </div>
 
-          <!-- Contact Info -->
           <div class="space-y-4">
             <h3 class="text-lg font-mono text-white mb-6">Contact</h3>
             <ul class="space-y-4 text-gray-400">
@@ -307,7 +293,6 @@
             </ul>
           </div>
 
-          <!-- Contact Buttons -->
           <div class="space-y-4">
             <h3 class="text-lg font-mono text-white mb-6">Get in Touch</h3>
             <div class="space-y-3">
@@ -377,7 +362,6 @@ onMounted(() => {
     }
   )
 
-  // Observe both sections
   if (aiSectionRef.value) {
     observer.observe(aiSectionRef.value)
   }
@@ -401,7 +385,7 @@ onUnmounted(() => {
 const capabilities = [
   {
     title: 'Full-Stack Excellence',
-    description: 'From frontend pixel perfection to backend brilliance, we craft comprehensive solutions that power your digital presence.',
+    description: 'From frontend pixel perfection to backend brilliance, we craft comprehensive solutions that power your digital presence',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
             <path d="M2 12h20" />
@@ -409,23 +393,23 @@ const capabilities = [
   },
   {
     title: 'AI-Enhanced Development',
-    description: 'Harnessing advanced AI to accelerate development cycles, squash bugs instantly, and deliver rapid solutions that keep your project moving at full speed.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <path d="M8 12h8M12 8v8" />
-            <path d="M3 12h3M12 3v3M21 12h-3M12 21v-3" />
-          </svg>`
+    description: 'Harnessing advanced AI to accelerate development cycles, squash bugs instantly, and deliver rapid solutions that keep your project moving at full speed',
+    icon: `<svg class="w-8 h-8" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="24">
+          <path d="M208,512a24.84,24.84,0,0,1-23.34-16l-39.84-103.6a16.06,16.06,0,0,0-9.19-9.19L32,343.34a25,25,0,0,1,0-46.68l103.6-39.84a16.06,16.06,0,0,0,9.19-9.19L184.66,144a25,25,0,0,1,46.68,0l39.84,103.6a16.06,16.06,0,0,0,9.19,9.19l103,39.63A25.49,25.49,0,0,1,400,320.52a24.82,24.82,0,0,1-16,22.82l-103.6,39.84a16.06,16.06,0,0,0-9.19,9.19L231.34,496A24.84,24.84,0,0,1,208,512Zm66.85-254.84h0Z" />
+          <path d="M88,176a14.67,14.67,0,0,1-13.69-9.4L57.45,122.76a7.28,7.28,0,0,0-4.21-4.21L9.4,101.69a14.67,14.67,0,0,1,0-27.38L53.24,57.45a7.31,7.31,0,0,0,4.21-4.21L74.16,9.79A15,15,0,0,1,86.23.11,14.67,14.67,0,0,1,101.69,9.4l16.86,43.84a7.31,7.31,0,0,0,4.21,4.21L166.6,74.31a14.67,14.67,0,0,1,0,27.38l-43.84,16.86a7.28,7.28,0,0,0-4.21,4.21L101.69,166.6A14.67,14.67,0,0,1,88,176Z" />
+          <path d="M400,256a16,16,0,0,1-14.93-10.26l-22.84-59.37a8,8,0,0,0-4.6-4.6l-59.37-22.84a16,16,0,0,1,0-29.86l59.37-22.84a8,8,0,0,0,4.6-4.6L384.9,42.68a16.45,16.45,0,0,1,13.17-10.57,16,16,0,0,1,16.86,10.15l22.84,59.37a8,8,0,0,0,4.6,4.6l59.37,22.84a16,16,0,0,1,0,29.86l-59.37,22.84a8,8,0,0,0-4.6,4.6l-22.84,59.37A16,16,0,0,1,400,256Z" />
+        </svg>`
   },
   {
     title: 'Performance Optimization',
-    description: 'We fine-tune every aspect of your website for peak performance, delivering lightning-fast experiences that keep your users engaged.',
+    description: 'We fine tune every aspect of your website for peak performance, delivering lightning fast experiences that keep your users engaged',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
           </svg>`
   },
   {
     title: 'Responsive Design',
-    description: 'Seamlessly adaptive interfaces that captivate your audience across every device and screen size, ensuring no user is left behind.',
+    description: 'Seamlessly adaptive interfaces that captivate your audience across every device and screen size, ensuring no user is left behind',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="3" width="14" height="18" rx="2" />
             <rect x="16" y="8" width="6" height="13" rx="2" />
@@ -433,7 +417,7 @@ const capabilities = [
   },
   {
     title: 'SEO Forward',
-    description: 'Built-in search engine optimization that puts your business at the forefront of digital discovery, driving organic growth and clicks from day one.',
+    description: 'Built in search engine optimization that puts your business at the forefront of digital discovery, driving organic growth and clicks from day one',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8" />
             <path d="M21 21l-4.35-4.35" />
@@ -442,7 +426,7 @@ const capabilities = [
   },
   {
     title: 'Brand Architecture',
-    description: 'We transform your brand identity into a cohesive digital experience, creating memorable interactions that resonate with your audience.',
+    description: 'We transform your brand into a cohesive digital identity, creating memorable interactions that resonate with your audience',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 19l7-7 3 3-7 7-3-3z" />
             <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
@@ -456,6 +440,10 @@ const gradientColors = ['#E70D01', '#FF5400', '#F77D05']
 </script>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
+
 .text-gradient {
   background: linear-gradient(to right, #E70D01, #FF5400, #F77D05);
   -webkit-background-clip: text;
@@ -530,7 +518,6 @@ const gradientColors = ['#E70D01', '#FF5400', '#F77D05']
   /* or your desired border width */
   background: linear-gradient(to right, rgba(231, 13, 1, 0.2), rgba(255, 84, 0, 0.2), rgba(247, 125, 5, 0.2));
   border-radius: inherit;
-  /* matches parent's border-radius */
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;

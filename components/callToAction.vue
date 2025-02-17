@@ -8,13 +8,11 @@ defineProps({
 </script>
 
 <template>
-  <!-- Mobile Version - No Animations -->
   <div
     class="block md:hidden text-white text-sm md:text-md lg:text-md text-center lg:text-left px-4 sm:px-8 md:px-16 lg:px-40">
     Tailored solutions that make your brand grow. Helping businesses of all sizes reach their full online potential.
   </div>
 
-  <!-- Desktop Version - With Animations -->
   <div
     class="hidden md:block opacity-0 animate-fade-up animation-delay-600 text-white text-sm md:text-md lg:text-md text-center lg:text-left px-4 sm:px-8 md:px-16 lg:px-40"
     :class="{ 'fade-out': isScrolled }" style="transition: all 0.5s ease-out">
