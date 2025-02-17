@@ -4,15 +4,17 @@
             <img src="/images/TWALogo-Photoroom.png" alt="The Web Agency Logo">
         </NuxtLink>
 
-        <button @click="isMenuOpen = !isMenuOpen" class="absolute right-4 top-6 md:hidden text-white">
+        <!-- Hamburger Button -->
+        <button @click="toggleMenu" class="absolute right-4 top-6 md:hidden text-white z-[60]">
             <span class="sr-only">Menu</span>
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path v-if="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16" />
-                <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            <svg class="w-6 h-6 transition-transform duration-300" :class="{ 'rotate-90': isMenuOpen }" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    :d="isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'" />
             </svg>
         </button>
 
+        <!-- Desktop Nav -->
         <nav class="hidden md:flex transition-all duration-1000 ease-in-out mt-8" :class="[isScrolled
             ? 'bg-black bg-opacity-90 py-2 px-4 rounded-lg shadow-lg h-16 nav-emphasis'
             : 'bg-black py-4 px-6 rounded-lg h-16 nav-emphasis']">
@@ -47,14 +49,28 @@
             </div>
         </nav>
 
-        <div v-if="isMenuOpen"
-            class="absolute top-20 left-0 right-0 bg-black bg-opacity-95 md:hidden py-4 px-6 border border-gray-800">
-            <div class="flex flex-col space-y-4">
-                <a v-for="link in links" :key="link" href="#" class="text-gray-400 hover:text-white">
-                    {{ link }}
-                </a>
-                <NuxtLink to="" class="text-gray-400 hover:text-white">The Team</NuxtLink>
-                <NuxtLink to="" class="text-[#E70D01] hover:text-[#FF5400]">Contact Us</NuxtLink>
+        <!-- Mobile Menu -->
+        <div class="fixed left-0 right-0 top-0 z-40 md:hidden transform transition-transform duration-300 ease-in-out"
+            :class="isMenuOpen ? 'translate-y-0' : '-translate-y-full'">
+            <!-- Background overlay -->
+            <div class="bg-black bg-opacity-95 border-b border-gray-800 shadow-lg">
+                <!-- Spacer for logo -->
+                <div class="h-20"></div>
+                <!-- Menu items -->
+                <div class="px-6 py-4">
+                    <div class="flex flex-col space-y-4">
+                        <a v-for="link in links" :key="link" href="#"
+                            class="text-gray-400 hover:text-white py-2 transition-colors duration-200">
+                            {{ link }}
+                        </a>
+                        <NuxtLink to="" class="text-gray-400 hover:text-white py-2 transition-colors duration-200">
+                            The Team
+                        </NuxtLink>
+                        <NuxtLink to="" class="text-[#E70D01] hover:text-[#FF5400] py-2 transition-colors duration-200">
+                            Contact Us
+                        </NuxtLink>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -67,8 +83,17 @@ const isMenuOpen = ref(false)
 const isScrolled = ref(false)
 const links = ['Client Work', 'Solutions', 'Our Story']
 
+const toggleMenu = () => {
+    isMenuOpen.value = !isMenuOpen.value
+    if (isMenuOpen.value) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        document.body.style.overflow = ''
+    }
+}
+
 const handleScroll = () => {
-    isScrolled.value = window.scrollY > 50
+    isScrolled.value = window.scrollY > 150
 }
 
 onMounted(() => {
@@ -77,6 +102,7 @@ onMounted(() => {
 
 onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
+    document.body.style.overflow = ''
 })
 </script>
 
@@ -133,5 +159,15 @@ button svg {
 
 button:hover svg {
     transform: scale(1.1);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
