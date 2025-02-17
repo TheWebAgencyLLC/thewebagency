@@ -9,7 +9,13 @@ defineProps({
 </script>
 
 <template>
-  <div class="relative" :class="{ 'opacity-0 translate-y-[-50px]': isScrolled }"
+  <div class="relative block md:hidden mt-4">
+    <div class="text-white mt-8 text-4xl md:text-4xl lg:text-5xl tracking-tighter text-center px-4 md:px-0">
+      &lt;Modern Websites <span class="text-[#E70D01]">Built</span> <span class="text-[#FF5400]">To</span> <span
+        class="text-[#F77D05]">Grow Your Business/&gt;</span>
+    </div>
+  </div>
+  <div class="relative hidden md:block" :class="{ 'opacity-0 translate-y-[-50px]': isScrolled }"
     style="transition: opacity 0.5s ease-out, transform 0.5s ease-out">
     <div class="hidden lg:block">
       <div class="floating-icon absolute left-24 -top-12 z-10">

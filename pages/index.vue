@@ -14,6 +14,14 @@
         <HeroSection :isScrolled="isScrolled" class="transition-all duration-500" />
         <CallToAction :isScrolled="isScrolled" />
         <CtaFeatures :isScrolled="isScrolled" />
+
+        <div class="flex flex-col items-center text-sm justify-center mb-6 md:hidden">
+          <!-- Changed md:mb-8 to md:hidden -->
+          <span
+            class="opacity-0 animate-fade-up animation-delay-0 text-xs text-gray-300 bg-black/40 p-2 px-4 border border-gray-800 mt-16 shadow-inner backdrop-blur-sm rounded-full mb-2 tracking-wide">
+            All your business website needs, in one place
+          </span>
+        </div>
         <!-- <SocialProofLogos class="opacity-0 animate-fade animation-delay-1000 pt-24" :isScrolled="isScrolled" /> -->
       </div>
     </div>
@@ -55,7 +63,7 @@
     </section>
 
     <SocialProofLogos />
-    <section class="relative py-24">
+    <section ref="aiSectionRef" class="relative py-24 fade-in">
       <div class="max-w-3xl mx-auto px-4 text-center">
         <p class="text-xl md:text-2xl leading-relaxed text-gray-300">
           <span class="text-gradient">AI isn't just a buzzword here</span>—it's your competitive advantage.
@@ -69,8 +77,8 @@
     </section>
 
     <section class="relative py-24">
-      <div class="max-w-7xl mx-auto px-8">
-        <!-- Header with circle decoration similar to previous section -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header section -->
         <div class="mb-12 relative">
           <div class="absolute -right-2 font-mono text-xl text-[#F77D05]">›_</div>
           <div class="flex items-center gap-3">
@@ -80,9 +88,9 @@
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#F77D05]">
               </div>
             </div>
-            <h2 class="text-2xl font-mono text-white">Solutions</h2>
+            <h2 class="text-xl sm:text-2xl font-mono text-white">Solutions</h2>
           </div>
-          <p class="text-gray-400 mt-4 max-w-2xl">
+          <p class="text-gray-400 mt-4 max-w-2xl text-sm sm:text-base">
             Our clients trust us to turn their boldest ideas into reality. Every project is an opportunity to exceed
             expectations and push boundaries.
           </p>
@@ -93,7 +101,40 @@
           <div class="absolute -bottom-2 -left-2 font-mono text-xl text-[#F77D05]">›_</div>
           <div class="absolute -bottom-2 -right-2 font-mono text-xl text-[#F77D05]">›_</div>
           <div class="px-4 pb-8">
-            <div class="grid grid-cols-12 gap-4 auto-rows-[100px]">
+            <!-- Mobile Layout -->
+            <div class="grid md:hidden gap-4">
+              <!-- Large boxes -->
+              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px]">
+                <!-- Box 1 content -->
+              </div>
+              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px]">
+                <!-- Box 2 content -->
+              </div>
+              <!-- Medium boxes -->
+              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px]">
+                <!-- Box 3 content -->
+              </div>
+              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px]">
+                <!-- Box 4 content -->
+              </div>
+              <!-- Tall box -->
+              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[250px]">
+                <!-- Box 5 content -->
+              </div>
+              <!-- Small boxes -->
+              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
+                <!-- Box 6 content -->
+              </div>
+              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
+                <!-- Box 7 content -->
+              </div>
+              <div class="bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px]">
+                <!-- Box 8 content -->
+              </div>
+            </div>
+
+            <!-- Desktop Layout -->
+            <div class="hidden md:grid grid-cols-12 gap-4 auto-rows-[100px]">
               <!-- Row 1: Two equal large boxes -->
               <div class="col-span-6 row-span-2 bg-black/40 rounded-3xl p-6 border border-white backdrop-blur-sm">
                 <!-- First large box -->
@@ -161,13 +202,12 @@
       </div>
     </section>
 
-    <section class="relative py-24 bg-black/20">
+    <section ref="bigIdeasSectionRef" class="relative py-24 bg-black/20 fade-in">
       <div class="max-w-3xl mx-auto px-8 text-center">
         <p class="text-3xl md:text-4xl font-light leading-relaxed text-white">
           <span class="text-gradient">Big ideas</span> energize us. Exceptional results <span
             class="text-gradient">define us.</span> Together we'll create something extraordinary <span
-            class="text-gradient">for your
-            customers.</span>
+            class="text-gradient">for your customers.</span>
         </p>
       </div>
     </section>
@@ -230,7 +270,7 @@
             </div>
 
             <!-- Social Links -->
-            <div class="flex gap-4 pl-2">
+            <div class="flex gap-4 md:pl-2">
               <a href="#"
                 class="p-2 bg-black/40 backdrop-blur-sm rounded-lg border border-gray-800/50 hover:-translate-y-1 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#F77D05]" fill="none" viewBox="0 0 24 24"
@@ -318,6 +358,34 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const isScrolled = ref(false)
 
+const aiSectionRef = ref(null)
+const bigIdeasSectionRef = ref(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '50px'
+    }
+  )
+
+  // Observe both sections
+  if (aiSectionRef.value) {
+    observer.observe(aiSectionRef.value)
+  }
+  if (bigIdeasSectionRef.value) {
+    observer.observe(bigIdeasSectionRef.value)
+  }
+})
+
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 100
 }
@@ -388,6 +456,24 @@ const gradientColors = ['#E70D01', '#FF5400', '#F77D05']
 </script>
 
 <style scoped>
+.text-gradient {
+  background: linear-gradient(to right, #E70D01, #FF5400, #F77D05);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 * {
   font-family: "JetBrains Mono", serif;
   font-optical-sizing: auto;
