@@ -17,7 +17,7 @@
             class="hidden md:flex transition-all duration-300 ease-in-out mt-8 bg-black/80 py-4 px-6 rounded-lg h-16 nav-emphasis">
             <div class="flex items-center space-x-6">
                 <div class="flex space-x-6 text-sm text-gray-400">
-                    <NuxtLink v-for="link in links" :key="link" :to="link.toLowerCase().replace(' ', '-')"
+                    <NuxtLink v-for="link in links" :key="link" :to="link === 'Home' ? '/' : link.toLowerCase().replace(' ', '-')"
                         class="nav-link relative py-2 transition-all duration-300 ease-in-out whitespace-nowrap cursor-pointer">
                         {{ link }}
                         <span class="link-underline"></span>
@@ -40,7 +40,7 @@
                 <div class="h-20"></div>
                 <div class="px-6 py-4">
                     <div class="flex flex-col space-y-4">
-                        <NuxtLink v-for="link in links" :key="link" :to="link.toLowerCase().replace(' ', '-')"
+                        <NuxtLink v-for="link in links" :key="link" :to="link === 'Home' ? '/' : link.toLowerCase().replace(' ', '-')"
                             class="text-gray-400 hover:text-white py-2 transition-colors duration-200 cursor-pointer">
                             {{ link }}
                         </NuxtLink>
@@ -63,7 +63,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const isMenuOpen = ref(false)
-const links = ['Work', 'About']
+const links = ['Home', 'Work', 'About', 'Contact']
 
 const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value
@@ -92,12 +92,16 @@ onUnmounted(() => {
     width: 100%;
     height: 2px;
     background: linear-gradient(to right, #E70D01, #FF5400, #F77D05);
-    transform: translateX(-100%);
+    transform: translateX(-101%); /* Increased to ensure complete hiding */
     transition: transform 0.3s ease;
+    opacity: 0; /* Start with zero opacity */
+    visibility: hidden; /* Ensure it's completely hidden by default */
 }
 
 .nav-link:hover .link-underline {
     transform: translateX(0);
+    opacity: 1; /* Fade in on hover */
+    visibility: visible; /* Make visible on hover */
 }
 
 .nav-link:hover {

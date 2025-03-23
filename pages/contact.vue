@@ -1,106 +1,208 @@
 <template>
-  <div class="bg-black min-h-screen flex justify-center items-center">
-    <!-- On mobile, container takes full width; on desktop (lg and up), it’s 2/3 of the width -->
-    <div
-      class="w-full lg:w-2/3 min-h-screen text-white flex flex-col justify-center items-center space-y-4 p-4"
-    >
-      <div
-        class="w-full flex flex-col justify-center items-center space-y-2 bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] bg-clip-text text-transparent"
-      >
-        <!-- Headings: slightly smaller on mobile, unchanged on desktop -->
-        <h1 class="text-4xl lg:text-6xl font-bold">Contact Us</h1>
-        <h2 class="text-lg lg:text-xl italic text-gray-300 font-light">
-          We are here to help you.
-        </h2>
+  <div class="bg-black min-h-screen relative">
+    <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
+    <!-- Top padding to prevent navbar overlap -->
+    <div class="pt-24 md:pt-32">
+      <!-- Hero section with angled design -->
+      <div class="relative overflow-hidden mb-12">
+        <div class="bg-gradient-to-r from-[#E70D01]/20 via-[#FF5400]/30 to-[#F77D05]/20 mt-12 absolute inset-0 transform -translate-y-20 h-64"></div>
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="text-center py-12">
+            <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] bg-clip-text text-transparent mb-3">Contact Us</h1>
+            <p class="text-gray-300 text-xl max-w-2xl mx-auto">Have a project in mind or questions about our services? We're here to help transform your digital vision into reality.</p>
+          </div>
+        </div>
       </div>
-      <!-- The horizontal rule is full width on mobile, half width on desktop -->
-      <hr
-        class="w-full lg:w-1/2 mt-10 bg-gradient-to-r from-gray-500 via-gray-500 to-gray-500"
-      />
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        class="w-full flex flex-col justify-center items-center space-y-5"
-      >
-        <!-- Hidden input for Netlify to identify the form -->
-        <input type="hidden" name="form-name" value="contact" />
 
-        <!-- Honeypot field (this field is hidden and helps prevent spam) -->
-        <p class="hidden">
-          <label>
-            Don’t fill this out if you're human:
-            <input name="bot-field" />
-          </label>
-        </p>
+      <div class="container mx-auto px-4 mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <!-- Contact Info Card -->
+          <div class="lg:col-span-4 order-2 lg:order-1">
+            <div class="bg-black/50 rounded-xl p-8 h-full backdrop-blur-sm border border-gray-800">
+              <h2 class="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#E70D01] to-[#FF5400] bg-clip-text text-transparent">Connect With Us</h2>
+              
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-gradient-to-r from-[#E70D01] to-[#FF5400] rounded-full p-3 mr-4 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white text-lg font-semibold">Email Us</h3>
+                    <p class="text-gray-400">thewebagencydev@gmail.com</p>
+                    <p class="text-gray-500 text-sm mt-1">We'll respond within 24 hours</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-gradient-to-r from-[#E70D01] to-[#FF5400] rounded-full p-3 mr-4 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white text-lg font-semibold">Working Hours</h3>
+                    <p class="text-gray-400">Monday - Friday</p>
+                    <p class="text-gray-400">8:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-gradient-to-r from-[#E70D01] to-[#FF5400] rounded-full p-3 mr-4 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white text-lg font-semibold">Social Media</h3>
+                    <div class="flex space-x-4 mt-2">
+                      <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#F77D05]" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path
+                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form Card -->
+          <div class="lg:col-span-8 order-1 lg:order-2">
+            <div class="bg-black/40 rounded-xl border border-gray-800 backdrop-blur-sm overflow-hidden">
+              <div class="p-1 bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05]">
+                <div class="bg-black/95 p-8">
+                  <h2 class="text-2xl font-semibold mb-6 text-white">Send Us a Message</h2>
+                  
+                  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <!-- Hidden input for Netlify to identify the form -->
+                    <input type="hidden" name="form-name" value="contact" />
 
-        <!-- Full Name Field -->
-        <div class="w-full lg:w-1/2 flex flex-col mt-10 space-y-2">
-          <label for="fullName">Full Name</label>
-          <div
-            class="p-[2px] rounded-md bg-gradient-to-r from-gray-500 via-gray-500 to-gray-500 transition-all duration-300 focus-within:from-[#E70D01] focus-within:via-[#FF5400] focus-within:to-[#F77D05]"
-          >
-            <input
-              id="fullName"
-              name="fullName"
-              type="text"
-              class="w-full p-4 h-12 bg-black/95 border-none text-white outline-none"
-            />
+                    <!-- Honeypot field (this field is hidden and helps prevent spam) -->
+                    <p class="hidden">
+                      <label>
+                        Don't fill this out if you're human:
+                        <input name="bot-field" />
+                      </label>
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <label for="fullName" class="block text-gray-400 mb-2 text-sm">Full Name</label>
+                        <div class="relative">
+                          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                          </div>
+                          <input
+                            id="fullName"
+                            name="fullName"
+                            type="text"
+                            required
+                            class="pl-10 w-full h-12 bg-black/70 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF5400] focus:border-transparent transition-all"
+                          />
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <label for="email" class="block text-gray-400 mb-2 text-sm">Email Address</label>
+                        <div class="relative">
+                          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                          </div>
+                          <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            required
+                            class="pl-10 w-full h-12 bg-black/70 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF5400] focus:border-transparent transition-all"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                      <label for="subject" class="block text-gray-400 mb-2 text-sm">Subject</label>
+                      <input
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        required
+                        class="w-full h-12 bg-black/70 border border-gray-700 rounded-lg text-white px-4 focus:outline-none focus:ring-2 focus:ring-[#FF5400] focus:border-transparent transition-all"
+                      />
+                    </div>
+                    
+                    <div class="mb-6">
+                      <label for="message" class="block text-gray-400 mb-2 text-sm">Your Message</label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows="6"
+                        class="w-full bg-black/70 border border-gray-700 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#FF5400] focus:border-transparent transition-all"
+                      ></textarea>
+                    </div>
+                    
+                    <button
+                      type="submit"
+                      class="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#FF5400]/30 focus:outline-none focus:ring-2 focus:ring-[#FF5400] focus:ring-offset-2 focus:ring-offset-black"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- Email Field -->
-        <div class="w-full lg:w-1/2 flex flex-col space-y-2">
-          <label for="email">Email</label>
-          <div
-            class="p-[2px] rounded-md bg-gradient-to-r from-gray-500 via-gray-500 to-gray-500 transition-all duration-300 focus-within:from-[#E70D01] focus-within:via-[#FF5400] focus-within:to-[#F77D05]"
-          >
-            <input
-              id="email"
-              name="email"
-              type="text"
-              class="w-full p-4 h-12 bg-black/95 border-none text-white outline-none"
-            />
+      </div>
+      
+      <!-- FAQ Section -->
+      <div class="container mx-auto px-4 mb-20">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] bg-clip-text text-transparent">Frequently Asked Questions</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">Find quick answers to common questions about our services.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div class="bg-black/30 border border-gray-800 rounded-lg p-6 hover:border-[#FF5400]/50 transition-all">
+            <h3 class="text-xl font-semibold text-white mb-3">What services do you offer?</h3>
+            <p class="text-gray-400">We specialize in web design, development, and custom software solutions tailored to your business needs.</p>
+          </div>
+          
+          <div class="bg-black/30 border border-gray-800 rounded-lg p-6 hover:border-[#FF5400]/50 transition-all">
+            <h3 class="text-xl font-semibold text-white mb-3">How much does a website cost?</h3>
+            <p class="text-gray-400">Our pricing varies based on project scope, requirements as well as delivery timing. Contact us for a personalized quote.</p>
+          </div>
+          
+          <div class="bg-black/30 border border-gray-800 rounded-lg p-6 hover:border-[#FF5400]/50 transition-all">
+            <h3 class="text-xl font-semibold text-white mb-3">How long does it take to build a website?</h3>
+            <p class="text-gray-400">Timeline depends on complexity. Simple sites can be done in 2-3 weeks, while larger projects may take 1-2 months.</p>
+          </div>
+          
+          <div class="bg-black/30 border border-gray-800 rounded-lg p-6 hover:border-[#FF5400]/50 transition-all">
+            <h3 class="text-xl font-semibold text-white mb-3">Do you offer website maintenance?</h3>
+            <p class="text-gray-400">We encourage clients to keep improving upon their website as well as give suggestions on what aspects of the website can be iterated upon.</p>
           </div>
         </div>
-
-        <!-- Textarea Field -->
-        <!-- On mobile, let the height be automatic; on desktop, use the fixed heights -->
-        <div
-          class="w-full lg:w-1/2 flex flex-col space-y-2 h-auto lg:h-[20rem]"
-        >
-          <label for="message">Tell us more about your inquiry.</label>
-          <div
-            class="p-[2px] rounded-md bg-gradient-to-r from-gray-500 via-gray-500 to-gray-500 transition-all duration-300 focus-within:from-[#E70D01] focus-within:via-[#FF5400] focus-within:to-[#F77D05]"
-          >
-            <textarea
-              id="message"
-              name="message"
-              class="w-full p-4 h-auto lg:h-[18rem] bg-black/95 border-none text-white outline-none"
-            ></textarea>
-          </div>
-        </div>
-
-        <!-- Button: full width on mobile, half width on desktop -->
-        <button
-          type="submit"
-          class="w-full lg:w-1/2 rounded-md text-lg font-semibold py-3 px-6 bg-gradient-to-r from-[#E70D01]/70 via-[#FF5400]/50 to-[#F77D05]/70 hover:from-[#E70D01] hover:via-[#FF5400] hover:to-[#F77D05] transition-colors duration-1000"
-        >
-          Send Inquiry
-        </button>
-      </form>
-      <hr class="bg-white w-1/2" />
-      <div class="grid grid-cols-2 gap-4 font-light italic text-gray-300">
-        <div>Email: thewebagencydev@gmail.com</div>
-        <div>Working hours: Mon-Fri 8am-6pm</div>
       </div>
     </div>
+    <AppFooter />
   </div>
 </template>
 
 <script setup>
+import AppFooter from '~/components/layout/appFooter.vue';
+
 definePageMeta({
-  layout: "what-the-hell-is-our-other-layout",
+  layout: "default",
 });
 </script>
