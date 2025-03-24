@@ -6,46 +6,34 @@
     
     <DotPattern
       class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
-    <!-- Hero Section -->
     <section class="relative overflow-hidden py-24 px-6">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-        <img src="/images/background.png" alt="Hero background" class="w-full h-full object-cover opacity-40" />
-      </div>
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <!-- Left Content -->
           <div class="space-y-6">
-            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight font-mono">Think differently</h1>
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight font-mono">Client Work</h1>
             <p class="text-lg md:text-xl text-white leading-relaxed">
-              We craft innovative digital experiences that blend vintage charm with modern functionality. Our team brings your vision to life with precision and artistry.
+              We transform the business storefront into digital success stories. Browse our portfolio of custom built, blank page solutions that have helped clients achieve measurable growth.
             </p>
             <p class="text-lg text-white leading-relaxed">
-              From concept to deployment, we transform ideas into exceptional websites and software solutions that drive business growth.
+              Each project showcases our commitment to blending distinctive design with powerful functionality.
             </p>
             <div class="pt-4">
-              <a href="/contact" class="inline-flex items-center px-6 py-3 border border-white bg-black text-white hover:bg-gray-800 text-base font-medium rounded-md shadow-sm transition duration-300">
+              <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3 border border-white bg-black text-white hover:bg-gray-800 text-base font-medium rounded-md shadow-sm transition duration-300">
                 Let's work together
+                <Icon name="mdi:rocket-launch" class="h-5 w-5" />
               </a>
             </div>
           </div>
           
-          <!-- Right Animation -->
           <div class="rounded-lg shadow-xl overflow-hidden">
             <div class="p-8 relative flex justify-center items-center">
-              <!-- Lottie Animation -->
-              <dotlottie-player src="https://lottie.host/e05b5ee8-9c2d-4eb5-8237-a165f061f7cf/ThZCs9j6g3.lottie" 
-                speed="1"
-                loop 
-                autoplay>
-              </dotlottie-player>
+              <div ref="lottieContainer" class="w-full h-full"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Business Verticals Section -->
     <section class="py-16 px-6 bg-gradient-to-br from-[#E70D01]/20 via-[#FF5400]/20 to-[#F77D05]/20">
       <div class="max-w-7xl mx-auto">
         <div class="flex items-center justify-between mb-12">
@@ -58,10 +46,10 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
           <div v-for="(vertical, index) in businessVerticals" :key="index" class="bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-sm p-4 border border-gray-700 hover:shadow-md transition duration-300 group">
             <div class="h-12 w-12 bg-gray-700 rounded mb-3 flex items-center justify-center text-[#FF5400]">
-              <component :is="vertical.icon" class="h-6 w-6" />
+              <Icon :name="vertical.icon" class="h-6 w-6" />
             </div>
             <h3 class="font-medium text-white">{{ vertical.name }}</h3>
           </div>
@@ -69,8 +57,6 @@
       </div>
     </section>
 
-    <!-- Clients Section -->
-    <!-- Clients Section -->
     <section class="py-16 px-6 bg-black">
       <div class="max-w-7xl mx-auto">
         <div class="flex items-center justify-between mb-12">
@@ -84,10 +70,9 @@
         </div>
       </div>
 
-      <!-- Featured Case Studies -->
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         <div v-for="(project, index) in featuredProjects" :key="index" class="rounded-lg overflow-hidden border border-gray-100 shadow-md hover:shadow-lg transition duration-300">
-          <div class="relative aspect-w-16 aspect-h-9 bg-gray-100">
+          <div class="relative bg-gray-100">
             <img :src="project.image" :alt="project.title" class="object-cover w-full h-full" />
           </div>
           <div class="p-6">
@@ -103,18 +88,17 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="py-10 px-6 relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-[#E70D01]/20 via-[#FF5400]/20 to-[#F77D05]/20"></div>
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
         <div class="mb-6 md:mb-0 md:mr-8">
           <h2 class="text-2xl font-bold text-white mb-2">Skyrocket your <span class="text-gradient">sales.</span></h2>
           <p class="text-white">Schedule your call to get started, today.</p>
-          <p class="text-sm text-white mt-2">Free initial consultation • 30-min</p>
+          <p class="text-sm text-white mt-2">Free initial consultation • 15-min</p>
         </div>
         <div class="flex items-center">
-          <a href="/contact" class="bg-black border border-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition duration-300 flex items-center">
-            Schedule a 30-min call
+          <a href="https://cal.com/the-web-agency/discovery" target="_blank" class="bg-black border border-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition duration-300 flex items-center">
+            Schedule a 15-min discovery call
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
@@ -132,27 +116,80 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted, ref, onActivated, nextTick } from 'vue';
 
-// Load Lottie player script
-onMounted(() => {
-  const script = document.createElement('script');
-  script.src = 'https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs';
-  script.type = 'module';
-  document.head.appendChild(script);
+const lottieContainer = ref(null);
+const lottiePlayer = ref(null);
+const lottieScriptLoaded = ref(false);
+
+const loadLottieScript = () => {
+  if (document.querySelector('script[src*="dotlottie-player"]')) {
+    lottieScriptLoaded.value = true;
+    return Promise.resolve();
+  }
+  
+  return new Promise((resolve) => {
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs';
+    script.type = 'module';
+    script.onload = () => {
+      lottieScriptLoaded.value = true;
+      resolve();
+    };
+    document.head.appendChild(script);
+  });
+};
+
+const initLottiePlayer = async () => {
+  await loadLottieScript();
+  await nextTick();
+  
+  if (lottieContainer.value) {
+    lottieContainer.value.innerHTML = '';
+    
+    const playerElement = document.createElement('dotlottie-player');
+    playerElement.setAttribute('src', 'https://lottie.host/e05b5ee8-9c2d-4eb5-8237-a165f061f7cf/ThZCs9j6g3.lottie');
+    playerElement.setAttribute('speed', '1');
+    playerElement.setAttribute('loop', '');
+    playerElement.setAttribute('autoplay', '');
+    
+    lottieContainer.value.appendChild(playerElement);
+    lottiePlayer.value = playerElement;
+  }
+};
+
+const cleanupLottiePlayer = () => {
+  if (lottieContainer.value) {
+    lottieContainer.value.innerHTML = '';
+  }
+  lottiePlayer.value = null;
+};
+
+onMounted(async () => {
+  await initLottiePlayer();
+});
+
+onActivated(() => {
+  initLottiePlayer();
+});
+
+onUnmounted(() => {
+  cleanupLottiePlayer();
 });
 
 const businessVerticals = [
-  { name: 'Healthcare', icon: 'ShoppingBagIcon' },
-  { name: 'SaaS', icon: 'CloudIcon' },
-  { name: 'Enterprise', icon: 'HeartIcon' },
-  { name: 'Small Business', icon: 'AcademicCapIcon' }
+{ name: 'Healthcare', icon: 'mdi:hospital' },
+  { name: 'SaaS', icon: 'mdi:cloud-outline' },
+  { name: 'Enterprise', icon: 'mdi:office-building' },
+  { name: 'Small Business', icon: 'mdi:store' },
+  { name: 'Restaurants', icon: 'mdi:food-fork-drink' },
+  { name: 'Hotels', icon: 'mdi:hotel' }
 ];
 
 const featuredProjects = [
   {
     title: 'Mobile Tire Pro',
-    description: 'Full-scale redesign and development of a small business website for mobile tire repair and maintainence',
+    description: 'Full-scale design and development of a small business website for mobile tire repair and maintainence',
     image: '/images/mobile-tire-pro.png',
     tags: ['Custom Booking API', 'Payments', 'Auth']
   },
@@ -170,7 +207,7 @@ const featuredProjects = [
   },
   {
     title: 'Servidiap - Clinic Software',
-    description: 'A consulting website for data analytics, data pipelines from source to cloud warehouse to provide analytics services for retail vendors.',
+    description: 'Custom built software designed to streamline day-to-day operations for the medical clinic, offering a comprehensive solution to manage everything from patient operations to inventory tracking.',
     image: '/images/servidiap-clinic.png',
     tags: ['Custom Software', 'Dashboard', 'Database Design', 'Auth']
   }
@@ -190,25 +227,6 @@ const featuredProjects = [
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-/* For the aspect ratio utility, if not using a plugin */
-.aspect-w-16 {
-  position: relative;
-  padding-bottom: calc(9 / 16 * 100%);
-}
-.aspect-w-21 {
-  position: relative;
-  padding-bottom: calc(9 / 21 * 100%);
-}
-.aspect-h-9 > * {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .group {

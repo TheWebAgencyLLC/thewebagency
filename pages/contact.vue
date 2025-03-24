@@ -2,11 +2,9 @@
   <div class="bg-black min-h-screen relative">
     <DotPattern
         class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
-    <!-- Top padding to prevent navbar overlap -->
     <div class="pt-24 md:pt-32">
-      <!-- Hero section with angled design -->
       <div class="relative overflow-hidden mb-12">
-        <div class="bg-gradient-to-r from-[#E70D01]/20 via-[#FF5400]/30 to-[#F77D05]/20 mt-12 absolute inset-0 transform -translate-y-20 h-64"></div>
+        <div class="absolute -top-8 left-1/2 size-48 md:size-72 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#E70D01]/20 via-[#FF5400]/20 to-[#F77D05]/20 blur-[80px] md:blur-[120px] z-0"></div>
         <div class="container mx-auto px-4 relative z-10">
           <div class="text-center py-12">
             <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] bg-clip-text text-transparent mb-3">Contact Us</h1>
@@ -165,7 +163,6 @@
         </div>
       </div>
       
-      <!-- FAQ Section -->
       <div class="container mx-auto px-4 mb-20">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] bg-clip-text text-transparent">Frequently Asked Questions</h2>

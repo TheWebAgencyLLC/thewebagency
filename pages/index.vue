@@ -17,7 +17,7 @@
 
         <div class="flex flex-col items-center text-sm justify-center mb-6 md:hidden animate-fade-up">
           <span
-            class="opacity-0 animate-fade-up animation-delay-0 text-xs text-white p-2 px-4 border border-gray-800 mt-16 shadow-inner backdrop-blur-sm rounded-full mb-2 tracking-wide">
+            class="opacity-0 animate-fade-up animation-delay-0 text-xs text-white p-2 px-4 border border-gray-800 shadow-inner backdrop-blur-sm rounded-full mb-2 tracking-wide">
             All your business website needs, in one place
           </span>
         </div>
@@ -425,7 +425,6 @@ html {
   content: '';
   position: absolute;
   inset: -1px;
-  /* or your desired border width */
   background: linear-gradient(to right, rgba(231, 13, 1, 0.2), rgba(255, 84, 0, 0.2), rgba(247, 125, 5, 0.2));
   border-radius: inherit;
   z-index: -1;

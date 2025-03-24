@@ -33,7 +33,6 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu -->
         <div class="fixed left-0 right-0 top-0 z-40 md:hidden transform transition-transform duration-300 ease-in-out"
             :class="isMenuOpen ? 'translate-y-0' : '-translate-y-full'">
             <div class="bg-black bg-opacity-95 border-b border-gray-800 shadow-lg">
@@ -43,10 +42,6 @@
                         <NuxtLink v-for="link in links" :key="link" :to="link === 'Home' ? '/' : link.toLowerCase().replace(' ', '-')"
                             class="text-gray-400 hover:text-white py-2 transition-colors duration-200 cursor-pointer">
                             {{ link }}
-                        </NuxtLink>
-                        <NuxtLink to="/about"
-                            class="text-gray-400 hover:text-white py-2 transition-colors duration-200 cursor-pointer">
-                            The Team
                         </NuxtLink>
                         <NuxtLink to="/contact"
                             class="text-[#E70D01] hover:text-[#FF5400] py-2 transition-colors duration-200 cursor-pointer">
@@ -92,16 +87,16 @@ onUnmounted(() => {
     width: 100%;
     height: 2px;
     background: linear-gradient(to right, #E70D01, #FF5400, #F77D05);
-    transform: translateX(-101%); /* Increased to ensure complete hiding */
+    transform: translateX(-101%);
     transition: transform 0.3s ease;
-    opacity: 0; /* Start with zero opacity */
-    visibility: hidden; /* Ensure it's completely hidden by default */
+    opacity: 0;
+    visibility: hidden;
 }
 
 .nav-link:hover .link-underline {
     transform: translateX(0);
-    opacity: 1; /* Fade in on hover */
-    visibility: visible; /* Make visible on hover */
+    opacity: 1;
+    visibility: visible;
 }
 
 .nav-link:hover {
@@ -115,7 +110,6 @@ onUnmounted(() => {
         0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06),
         0 0 20px rgba(0, 0, 0, 0.3);
-    /* Added deeper shadow */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 50;
@@ -133,7 +127,6 @@ onUnmounted(() => {
     z-index: -1;
     filter: blur(10px);
     opacity: 0.1;
-    /* Reduced opacity for subtlety */
     border-radius: inherit;
     pointer-events: none;
 }
