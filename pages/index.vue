@@ -247,6 +247,7 @@
 
 <script setup>
 import AppHeader from '~/components/layout/appHeader.vue'
+import AppFooter from '~/components/layout/appFooter.vue';
 import SocialProofLogos from '~/components/socialProofLogos.vue'
 
 import { ref, onMounted, onUnmounted } from 'vue'

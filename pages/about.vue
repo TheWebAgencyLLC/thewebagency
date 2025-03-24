@@ -284,8 +284,7 @@
   
   <script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
-  import AppHeader from '~/components/layout/appHeader.vue'
-  import AppFooter from '~/components/layout/appFooter.vue'
+  import AppFooter from '~/components/layout/appFooter.vue';
   import DotPattern from '~/components/dotPattern.vue'
   import DividerLine from '~/components/dividerLine.vue'
   

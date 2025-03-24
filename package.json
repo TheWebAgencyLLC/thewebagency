@@ -17,6 +17,7 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
     "nuxt-icon": "^1.0.0-beta.7"
   }
 }

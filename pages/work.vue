@@ -6,18 +6,21 @@
     
     <DotPattern
       class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
-    <section class="relative overflow-hidden py-24 px-6">
+      <section class="relative overflow-hidden py-24 px-6">
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div class="space-y-6">
-            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight font-mono">Client Work</h1>
-            <p class="text-lg md:text-xl text-white leading-relaxed">
+          <div class="max-w-7xl mx-auto relative z-10">
+            <div class="mb-2 text-sm font-mono text-gray-500 animate-fade-up">/01 Projects</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white tracking-tighter animate-fade-up animation-delay-200">
+              Client Work
+            </h1>
+            <p class="text-lg text-white leading-relaxed mb-4 animate-fade-up animation-delay-400">
               We transform the business storefront into digital success stories. Browse our portfolio of custom built, blank page solutions that have helped clients achieve measurable growth.
             </p>
-            <p class="text-lg text-white leading-relaxed">
+            <p class="text-lg text-white leading-relaxed mb-4 animate-fade-up animation-delay-600">
               Each project showcases our commitment to blending distinctive design with powerful functionality.
             </p>
-            <div class="pt-4">
+            <div class="pt-4 animate-fade-up animation-delay-800">
               <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3 border border-white bg-black text-white hover:bg-gray-800 text-base font-medium rounded-md shadow-sm transition duration-300">
                 Let's work together
                 <Icon name="mdi:rocket-launch" class="h-5 w-5" />
@@ -25,7 +28,7 @@
             </div>
           </div>
           
-          <div class="rounded-lg shadow-xl overflow-hidden">
+          <div class="rounded-lg shadow-xl overflow-hidden animate-fade-up animation-delay-1000">
             <div class="p-8 relative flex justify-center items-center">
               <div ref="lottieContainer" class="w-full h-full"></div>
             </div>
@@ -251,5 +254,88 @@ const featuredProjects = [
 
 .group:hover::before {
   opacity: 1;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+.animation-delay-800 {
+  animation-delay: 0.8s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .opacity-0 {
+    opacity: 0;
+  }
+  
+  .animate-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .section-fade-in {
+  opacity: 0;
+  animation: sectionFade 1s ease-out forwards;
+}
+
+@keyframes sectionFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

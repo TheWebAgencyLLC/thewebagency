@@ -6,9 +6,11 @@
       <div class="relative overflow-hidden mb-12">
         <div class="absolute -top-8 left-1/2 size-48 md:size-72 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#E70D01]/20 via-[#FF5400]/20 to-[#F77D05]/20 blur-[80px] md:blur-[120px] z-0"></div>
         <div class="container mx-auto px-4 relative z-10">
-          <div class="text-center py-12">
-            <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] bg-clip-text text-transparent mb-3">Contact Us</h1>
-            <p class="text-gray-300 text-xl max-w-2xl mx-auto">Have a project in mind or questions about our services? We're here to help transform your digital vision into reality.</p>
+          <div class="max-w-7xl mx-auto relative z-10">
+            <div class="mb-2 text-sm font-mono text-gray-500 animate-fade-up">/03 CONTACT US</div>
+            <h1 class="text-3xl md:text-4xl font-bold mt-8 mb-8 md:mb-16 text-white tracking-tighter animate-fade-up animation-delay-200">
+              Have a project in mind or questions about our services? We're here to transform your digital vision into reality.
+            </h1>
           </div>
         </div>
       </div>
@@ -18,6 +20,8 @@
           <!-- Contact Info Card -->
           <div class="lg:col-span-4 order-2 lg:order-1">
             <div class="bg-black/50 rounded-xl p-8 h-full backdrop-blur-sm border border-gray-800">
+              <DotPattern
+        class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
               <h2 class="text-2xl font-semibold mb-6 bg-gradient-to-r from-[#E70D01] to-[#FF5400] bg-clip-text text-transparent">Connect With Us</h2>
               
               <div class="space-y-6">
@@ -46,26 +50,6 @@
                     <p class="text-gray-400">8:00 AM - 6:00 PM</p>
                   </div>
                 </div>
-                
-                <div class="flex items-start">
-                  <div class="bg-gradient-to-r from-[#E70D01] to-[#FF5400] rounded-full p-3 mr-4 flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="text-white text-lg font-semibold">Social Media</h3>
-                    <div class="flex space-x-4 mt-2">
-                      <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#F77D05]" fill="none" viewBox="0 0 24 24"
-                          stroke="currentColor">
-                          <path
-                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -74,7 +58,9 @@
           <div class="lg:col-span-8 order-1 lg:order-2">
             <div class="bg-black/40 rounded-xl border border-gray-800 backdrop-blur-sm overflow-hidden">
               <div class="p-1 bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05]">
-                <div class="bg-black/95 p-8">
+                <DotPattern
+                  class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
+                <div class="bg-black/95 p-8 rounded-xl">
                   <h2 class="text-2xl font-semibold mb-6 text-white">Send Us a Message</h2>
                   
                   <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
@@ -203,3 +189,22 @@ definePageMeta({
   layout: "default",
 });
 </script>
+
+<style>
+  .animate-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

@@ -1,5 +1,8 @@
 <template>
     <div class="fixed top-0 flex justify-center w-full z-[100] font-jetbrains">
+        <!-- Dark background header for mobile -->
+        <div class="fixed top-0 left-0 right-0 h-20 bg-black/50 backdrop-blur-sm md:hidden z-50"></div>
+        
         <NuxtLink to="/" class="absolute left-4 mt-4 h-16 w-16 md:h-24 md:w-24 z-[60]">
             <img src="/images/TWALogo-Photoroom.png" alt="The Web Agency Logo">
         </NuxtLink>
@@ -40,10 +43,12 @@
                 <div class="px-6 py-4">
                     <div class="flex flex-col space-y-4">
                         <NuxtLink v-for="link in links" :key="link" :to="link === 'Home' ? '/' : link.toLowerCase().replace(' ', '-')"
+                            @click="toggleMenu"
                             class="text-gray-400 hover:text-white py-2 transition-colors duration-200 cursor-pointer">
                             {{ link }}
                         </NuxtLink>
                         <NuxtLink to="/contact"
+                            @click="toggleMenu"
                             class="text-[#E70D01] hover:text-[#FF5400] py-2 transition-colors duration-200 cursor-pointer">
                             Contact Us
                         </NuxtLink>
