@@ -232,7 +232,7 @@
           </div>
 
           <div class="mt-12 text-center">
-            <a href="#"
+            <a href="/about"
               class="inline-block px-8 py-4 bg-gradient-to-r from-[#E70D01] to-[#F77D05] rounded-full text-white font-medium hover:opacity-90 transition-opacity">
               Meet Your Success Team ->
             </a>

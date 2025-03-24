@@ -11,12 +11,18 @@ defineProps({
     <div class="block md:hidden">
         <div class="flex justify-center items-center text-white gap-8 text-xl font-light">
             <div class="flex space-x-4">
-                <NuxtLink to=""
+                <NuxtLink to="/contact"
                     class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full cursor-pointer">
                     <span
                         class="block px-4 py-2 text-white text-sm rounded-full hover:bg-black transition-all duration-300">
-                        Get a Quote →
+                        Get a Quote <Icon name="mdi:currency-usd" class="inline-block ml-1" />
                     </span>
+                </NuxtLink>
+                <NuxtLink to="https://cal.com/the-web-agency/discovery" target="_blank" class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full cursor-pointer">
+                <span
+                    class="block px-4 py-2 text-white text-sm rounded-full hover:bg-black transition-all duration-300">
+                    Schedule a Call <Icon name="mdi:phone" class="inline-block ml-1" />
+                </span>
                 </NuxtLink>
             </div>
         </div>
@@ -56,8 +62,14 @@ defineProps({
                     class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full cursor-pointer">
                     <span
                         class="block px-4 py-2 text-white text-sm rounded-full hover:bg-black transition-all duration-300">
-                        Get a Quote →
+                        Get a Quote <Icon name="mdi:currency-usd" class="inline-block ml-1" />
                     </span>
+                </NuxtLink>
+                <NuxtLink to="https://cal.com/the-web-agency/discovery" target="_blank" class="bg-gradient-to-r from-[#E70D01] via-[#FF5400] to-[#F77D05] p-[2px] rounded-full cursor-pointer">
+                <span
+                    class="block px-4 py-2 text-white text-sm rounded-full hover:bg-black transition-all duration-300">
+                    Schedule a Call <Icon name="mdi:phone" class="inline-block ml-1" />
+                </span>
                 </NuxtLink>
             </div>
         </div>
