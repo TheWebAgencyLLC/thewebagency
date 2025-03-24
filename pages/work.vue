@@ -10,7 +10,7 @@
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div class="max-w-7xl mx-auto relative z-10">
-            <div class="mb-2 text-sm font-mono text-gray-500 animate-fade-up">/01 Projects</div>
+            <div class="mb-2 text-sm font-mono text-gray-500 animate-fade-up">/01 PROJECTS</div>
             <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white tracking-tighter animate-fade-up animation-delay-200">
               Client Work
             </h1>
