@@ -74,21 +74,46 @@
       </div>
 
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <div v-for="(project, index) in featuredProjects" :key="index" class="rounded-lg overflow-hidden border border-gray-100 shadow-md hover:shadow-lg transition duration-300">
-          <div class="relative bg-gray-100">
-            <img :src="project.image" :alt="project.title" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-6">
-            <h3 class="font-bold text-xl text-white mb-2">{{ project.title }}</h3>
-            <p class="text-white mb-4">{{ project.description }}</p>
-            <div class="flex items-center space-x-2">
-              <span v-for="(tag, tagIndex) in project.tags" :key="tagIndex" class="text-xs font-medium text-gray-900 bg-gray-100 px-2 py-1 rounded">
-                {{ tag }}
-              </span>
-            </div>
-          </div>
-        </div>
+  <div 
+    v-for="(project, index) in featuredProjects" 
+    :key="index" 
+    class="rounded-lg overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+  >
+    <div class="relative bg-gray-100 overflow-hidden">
+      <img 
+        :src="project.image" 
+        :alt="project.title" 
+        class="object-cover w-full h-full transition-transform duration-500 hover:scale-105" 
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+    </div>
+    <div class="p-6">
+      <h3 class="font-bold text-xl text-white mb-2">{{ project.title }}</h3>
+      <p class="text-white mb-4">{{ project.description }}</p>
+      <div class="flex items-center space-x-2">
+        <span 
+          v-for="(tag, tagIndex) in project.tags" 
+          :key="tagIndex" 
+          class="text-xs font-medium text-gray-900 bg-gray-100 px-2 py-1 rounded"
+        >
+          {{ tag }}
+        </span>
       </div>
+      <NuxtLink 
+        v-if="project.url" 
+        :to="project.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center mt-4 text-gray-200 cursor-pointer hover:text-white transition-colors duration-300"
+      >
+        <span class="text-sm">Visit site</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </NuxtLink>
+    </div>
+  </div>
+</div>
     </section>
 
     <section class="py-10 px-6 relative overflow-hidden">
@@ -194,19 +219,22 @@ const featuredProjects = [
     title: 'Mobile Tire Pro',
     description: 'Full-scale design and development of a small business website for mobile tire repair and maintainence',
     image: '/images/mobile-tire-pro.png',
-    tags: ['Custom Booking API', 'Payments', 'Auth']
+    tags: ['Custom Booking API', 'Payments', 'Auth'],
+    url: 'https://mobiletirepro.net'
   },
   {
     title: 'Hampshire Pharmacy',
     description: 'A prescription medicine lookup web-app made for the patients and prospective customers of the Hampshire Pharmacy.',
     image: '/images/hampshire-pharmacy.png',
-    tags: ['Lookup Tool', 'Database', 'Administrative Dashboard']
+    tags: ['Lookup Tool', 'Database', 'Administrative Dashboard'],
+    url: 'https://hampshirepharmacy.com'
   },
   {
     title: 'ByteHog',
     description: 'A consulting website for data analytics, data pipelines from source to cloud warehouse to provide analytics services for retail vendors.',
     image: '/images/bytehog.png',
-    tags: ['Enterprise', 'Blogs']
+    tags: ['Enterprise', 'Blogs'],
+    url: 'https://bytehog.co'
   },
   {
     title: 'Servidiap - Clinic Software',

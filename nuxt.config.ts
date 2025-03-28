@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     }
   },
 
+  build: {
+    transpile: ['nuxt-icon']
+  },
+
   app: {
     head: {
       title: 'The Web Agency | Dev & Design Studio',
