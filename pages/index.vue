@@ -139,150 +139,314 @@
         </div>
 
         <div class="relative">
-<DotPattern
-  class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
-<div class="px-4 pb-8">
-  <div class="grid md:hidden gap-4">
-    <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px] flex flex-col">
-      <h3 class="text-xl font-bold mb-2 text-white">Landing Page Creation</h3>
-      <p class="text-gray-300 mb-2">Converting visitors with compelling visuals and clear calls to action.</p>
-      <div class="mt-auto h-32 overflow-hidden">
-        <img src="/images/landing.png" alt="Landing Page Creation" class="w-full h-full object-contain">
-      </div>
-    </div>
-    <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px] flex flex-col">
-      <h3 class="text-xl font-bold mb-2 text-white">From Scratch Design & Branding</h3>
-      <p class="text-white mb-2">Unique designs that establish your brand identity and stand out.</p>
-      <div class="mt-auto h-32 overflow-hidden">
-        <img src="/images/design.png" alt="Design and Branding" class="w-full h-full object-contain">
-      </div>
-    </div>
-    <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px] flex flex-col">
-      <h3 class="text-xl font-bold mb-2 text-white">Custom Solutions</h3>
-      <p class="text-white mb-2">Driving down third-party costs while improving functionality.</p>
-      <div class="mt-auto h-32 overflow-hidden">
-        <img src="/images/custom-software.png" alt="Custom Solutions" class="w-full h-full object-contain">
-      </div>
-    </div>
-    <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px] flex flex-col">
-      <h3 class="text-xl font-bold mb-2 text-white">Payment Provider Solutions</h3>
-      <p class="text-white mb-2">Seamless integration with popular payment gateways.</p>
-      <div class="mt-auto h-32 overflow-hidden">
-        <img src="/images/payment-solutions.png" alt="Payment Solutions" class="w-full h-full object-contain">
-      </div>
-    </div>
-    <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[250px] flex flex-col">
-      <h3 class="text-xl font-bold mb-2 text-white">Custom Business Software</h3>
-      <p class="text-white mb-2">Dashboards and applications that streamline operations and drive growth.</p>
-      <div class="mt-auto h-40 overflow-hidden">
-        <img src="/images/custom-software.png" alt="Custom Business Software" class="w-full h-full object-contain">
-      </div>
-    </div>
-    <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px] flex flex-col">
-      <h3 class="text-xl font-bold mb-2 text-white">Copywriting</h3>
-      <p class="text-white mb-2">Persuasive content that communicates your value.</p>
-      <div class="mt-auto h-24 overflow-hidden">
-        <img src="/images/copywriting.png" alt="Copywriting" class="w-full h-full object-contain">
-      </div>
-    </div>
-    <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px] flex flex-col">
-      <h3 class="text-xl font-bold mb-2 text-white">Analytics Monitoring</h3>
-      <p class="text-white mb-2">Data-driven insights to guide strategic decisions.</p>
-      <div class="mt-auto h-24 overflow-hidden">
-        <img src="/images/analytics.png" alt="Analytics" class="w-full h-full object-contain">
-      </div>
-    </div>
-    <div class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px] flex flex-col">
-      <h3 class="text-xl font-bold mb-2 text-white">Maintenance & SEO Audits</h3>
-      <p class="text-white mb-2">Year-round support for security and search ranking.</p>
-      <div class="mt-auto h-24 overflow-hidden">
-        <img src="/images/seo.png" alt="SEO" class="w-full h-full object-contain">
-      </div>
-    </div>
-  </div>
+          <DotPattern
+            class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none"
+          />
+          <div class="px-4 pb-8">
+            <div class="grid md:hidden gap-4">
+              <div
+                class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px] flex flex-col"
+              >
+                <h3 class="text-xl font-bold mb-2 text-white">
+                  Landing Page Creation
+                </h3>
+                <p class="text-gray-300 mb-2">
+                  Converting visitors with compelling visuals and clear calls to
+                  action.
+                </p>
+                <div class="mt-auto h-32 overflow-hidden">
+                  <img
+                    src="/images/landing.png"
+                    alt="Landing Page Creation"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[200px] flex flex-col"
+              >
+                <h3 class="text-xl font-bold mb-2 text-white">
+                  From Scratch Design & Branding
+                </h3>
+                <p class="text-white mb-2">
+                  Unique designs that establish your brand identity and stand
+                  out.
+                </p>
+                <div class="mt-auto h-32 overflow-hidden">
+                  <img
+                    src="/images/design.png"
+                    alt="Design and Branding"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px] flex flex-col"
+              >
+                <h3 class="text-xl font-bold mb-2 text-white">
+                  Custom Solutions
+                </h3>
+                <p class="text-white mb-2">
+                  Driving down third-party costs while improving functionality.
+                </p>
+                <div class="mt-auto h-32 overflow-hidden">
+                  <img
+                    src="/images/custom-software.png"
+                    alt="Custom Solutions"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[180px] flex flex-col"
+              >
+                <h3 class="text-xl font-bold mb-2 text-white">
+                  Payment Provider Solutions
+                </h3>
+                <p class="text-white mb-2">
+                  Seamless integration with popular payment gateways.
+                </p>
+                <div class="mt-auto h-32 overflow-hidden">
+                  <img
+                    src="/images/payment-solutions.png"
+                    alt="Payment Solutions"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[250px] flex flex-col"
+              >
+                <h3 class="text-xl font-bold mb-2 text-white">
+                  Custom Business Software
+                </h3>
+                <p class="text-white mb-2">
+                  Dashboards and applications that streamline operations and
+                  drive growth.
+                </p>
+                <div class="mt-auto h-40 overflow-hidden">
+                  <img
+                    src="/images/custom-software.png"
+                    alt="Custom Business Software"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px] flex flex-col"
+              >
+                <h3 class="text-xl font-bold mb-2 text-white">Copywriting</h3>
+                <p class="text-white mb-2">
+                  Persuasive content that communicates your value.
+                </p>
+                <div class="mt-auto h-24 overflow-hidden">
+                  <img
+                    src="/images/copywriting.png"
+                    alt="Copywriting"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px] flex flex-col"
+              >
+                <h3 class="text-xl font-bold mb-2 text-white">
+                  Analytics Monitoring
+                </h3>
+                <p class="text-white mb-2">
+                  Data-driven insights to guide strategic decisions.
+                </p>
+                <div class="mt-auto h-24 overflow-hidden">
+                  <img
+                    src="/images/analytics.png"
+                    alt="Analytics"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="rounded-3xl p-6 border border-white backdrop-blur-sm min-h-[150px] flex flex-col"
+              >
+                <h3 class="text-xl font-bold mb-2 text-white">
+                  Maintenance & SEO Audits
+                </h3>
+                <p class="text-white mb-2">
+                  Year-round support for security and search ranking.
+                </p>
+                <div class="mt-auto h-24 overflow-hidden">
+                  <img
+                    src="/images/seo.png"
+                    alt="SEO"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
 
-  <div class="hidden md:grid grid-cols-12 gap-4">
-    <div class="col-span-6 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col">
-      <div class="mb-2">
-        <h3 class="text-xl font-bold mb-2 text-white">Landing Page Creation</h3>
-        <p class="text-gray-300">Converting visitors with compelling visuals and clear calls to action.</p>
-      </div>
-      <div class="h-40 overflow-hidden mt-2">
-        <img src="/images/landing.png" alt="Landing Page Creation" class="w-full h-full object-contain">
-      </div>
-    </div>
+            <div class="hidden md:grid grid-cols-12 gap-4">
+              <div
+                class="col-span-6 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col"
+              >
+                <div class="mb-2">
+                  <h3 class="text-xl font-bold mb-2 text-white">
+                    Landing Page Creation
+                  </h3>
+                  <p class="text-gray-300">
+                    Converting visitors with compelling visuals and clear calls
+                    to action.
+                  </p>
+                </div>
+                <div class="h-40 overflow-hidden mt-2">
+                  <img
+                    src="/images/landing.png"
+                    alt="Landing Page Creation"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
-    <div class="col-span-6 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col">
-      <div class="mb-2">
-        <h3 class="text-xl font-bold mb-2 text-white">From Scratch Design & Branding</h3>
-        <p class="text-white">Unique designs that establish your brand identity and stand out.</p>
-      </div>
-      <div class="h-40 overflow-hidden mt-2">
-        <img src="/images/design.png" alt="Design and Branding" class="w-full h-full object-contain">
-      </div>
-    </div>
+              <div
+                class="col-span-6 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col"
+              >
+                <div class="mb-2">
+                  <h3 class="text-xl font-bold mb-2 text-white">
+                    From Scratch Design & Branding
+                  </h3>
+                  <p class="text-white">
+                    Unique designs that establish your brand identity and stand
+                    out.
+                  </p>
+                </div>
+                <div class="h-40 overflow-hidden mt-2">
+                  <img
+                    src="/images/design.png"
+                    alt="Design and Branding"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
-    <div class="col-span-3 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col">
-      <div class="mb-2">
-        <h3 class="text-lg font-bold mb-1 text-white">Custom Solutions</h3>
-        <p class="text-white text-sm">Driving down third-party costs while improving functionality.</p>
-      </div>
-      <div class="h-24 overflow-hidden mt-2">
-        <img src="/images/custom-software.png" alt="Custom Solutions" class="w-full h-full object-contain">
-      </div>
-    </div>
+              <div
+                class="col-span-3 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col"
+              >
+                <div class="mb-2">
+                  <h3 class="text-lg font-bold mb-1 text-white">
+                    Custom Solutions
+                  </h3>
+                  <p class="text-white text-sm">
+                    Driving down third-party costs while improving
+                    functionality.
+                  </p>
+                </div>
+                <div class="h-24 overflow-hidden mt-2">
+                  <img
+                    src="/images/custom-software.png"
+                    alt="Custom Solutions"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
-    <div class="col-span-3 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col">
-      <div class="mb-2">
-        <h3 class="text-lg font-bold mb-1 text-white">Payment Solutions</h3>
-        <p class="text-white text-sm">Seamless integration with popular payment gateways.</p>
-      </div>
-      <div class="h-24 overflow-hidden mt-2">
-        <img src="/images/payment-solutions.png" alt="Payment Solutions" class="w-full h-full object-contain">
-      </div>
-    </div>
+              <div
+                class="col-span-3 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col"
+              >
+                <div class="mb-2">
+                  <h3 class="text-lg font-bold mb-1 text-white">
+                    Payment Solutions
+                  </h3>
+                  <p class="text-white text-sm">
+                    Seamless integration with popular payment gateways.
+                  </p>
+                </div>
+                <div class="h-24 overflow-hidden mt-2">
+                  <img
+                    src="/images/payment-solutions.png"
+                    alt="Payment Solutions"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
-    <div class="col-span-6 row-span-4 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col">
-      <div class="mb-2">
-        <h3 class="text-xl font-bold mb-2 text-white">Custom Business Software</h3>
-        <p class="text-white">Bespoke dashboards and business applications designed to streamline your operations and provide insights that drive growth.</p>
-      </div>
-      <div class="h-64 overflow-hidden mt-8">
-        <img src="/images/custom-software.png" alt="Custom Business Software" class="w-full h-full object-contain">
-      </div>
-    </div>
-  </div>
-</div>
+              <div
+                class="col-span-6 row-span-4 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col"
+              >
+                <div class="mb-2">
+                  <h3 class="text-xl font-bold mb-2 text-white">
+                    Custom Business Software
+                  </h3>
+                  <p class="text-white">
+                    Bespoke dashboards and business applications designed to
+                    streamline your operations and provide insights that drive
+                    growth.
+                  </p>
+                </div>
+                <div class="h-64 overflow-hidden mt-8">
+                  <img
+                    src="/images/custom-software.png"
+                    alt="Custom Business Software"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
-<div class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col">
-  <div class="mb-1">
-    <h3 class="text-lg font-bold mb-1 text-white">Copywriting</h3>
-    <p class="text-white text-xs">Persuasive content that communicates your value.</p>
-  </div>
-  <div class="h-20 overflow-hidden mt-2">
-    <img src="/images/copywriting.png" alt="Copywriting" class="w-full h-full object-contain">
-  </div>
-</div>
+              <div
+                class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col"
+              >
+                <div class="mb-1">
+                  <h3 class="text-lg font-bold mb-1 text-white">Copywriting</h3>
+                  <p class="text-white text-xs">
+                    Persuasive content that communicates your value.
+                  </p>
+                </div>
+                <div class="h-20 overflow-hidden mt-2">
+                  <img
+                    src="/images/copywriting.png"
+                    alt="Copywriting"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
-<div class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col">
-  <div class="mb-1">
-    <h3 class="text-lg font-bold mb-1 text-white">Analytics</h3>
-    <p class="text-white text-xs">Data-driven insights to guide strategic decisions.</p>
-  </div>
-  <div class="h-20 overflow-hidden mt-2">
-    <img src="/images/analytics.png" alt="Analytics" class="w-full h-full object-contain">
-  </div>
-</div>
+              <div
+                class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col"
+              >
+                <div class="mb-1">
+                  <h3 class="text-lg font-bold mb-1 text-white">Analytics</h3>
+                  <p class="text-white text-xs">
+                    Data-driven insights to guide strategic decisions.
+                  </p>
+                </div>
+                <div class="h-20 overflow-hidden mt-2">
+                  <img
+                    src="/images/analytics.png"
+                    alt="Analytics"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
-<div class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col">
-  <div class="mb-1">
-    <h3 class="text-lg font-bold mb-1 text-white">Maintenance & SEO</h3>
-    <p class="text-white text-xs">Year-round support for security and search ranking.</p>
-  </div>
-  <div class="h-20 overflow-hidden mt-2">
-    <img src="/images/seo.png" alt="SEO" class="w-full h-full object-contain">
-  </div>
-</div>
+              <div
+                class="col-span-2 row-span-2 rounded-3xl p-6 border border-white backdrop-blur-sm flex flex-col"
+              >
+                <div class="mb-1">
+                  <h3 class="text-lg font-bold mb-1 text-white">
+                    Maintenance & SEO
+                  </h3>
+                  <p class="text-white text-xs">
+                    Year-round support for security and search ranking.
+                  </p>
+                </div>
+                <div class="h-20 overflow-hidden mt-2">
+                  <img
+                    src="/images/seo.png"
+                    alt="SEO"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
