@@ -1,7 +1,7 @@
 <template>
     <div class="fixed top-0 flex justify-center w-full z-[100] font-jetbrains">
         <!-- Dark background header for mobile -->
-        <div class="fixed top-0 left-0 right-0 h-20 bg-black/50 backdrop-blur-sm md:hidden z-50"></div>
+        <div class="fixed top-0 left-0 right-0 h-20 backdrop-blur-sm md:hidden z-50"></div>
         
         <NuxtLink to="/" class="absolute left-4 mt-4 h-16 w-16 md:h-24 md:w-24 z-[60]">
             <img src="/images/TWALogo-Photoroom.png" alt="The Web Agency Logo">
