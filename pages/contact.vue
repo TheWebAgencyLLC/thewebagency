@@ -188,6 +188,31 @@ import AppFooter from '~/components/layout/appFooter.vue';
 definePageMeta({
   layout: "default",
 });
+
+useSeoMeta({
+  description: 'The Web Agency delivers custom websites and software solutions engineered to drive measurable business growth.',
+  ogTitle: 'The Web Agency | Dev & Design Studio',
+  ogDescription: 'The Web Agency delivers custom websites and software solutions engineered to drive measurable business growth.',
+  ogImage: 'https://thewebagency.app/meta-og-image.png',
+  ogUrl: 'https://thewebagency.app',
+  twitterTitle: 'The Web Agency | Dev & Design Studio',
+  twitterDescription: 'The Web Agency delivers custom websites and software solutions engineered to drive measurable business growth.',
+  twitterImage: 'https://thewebagency.app/meta-og-image.png',
+  twitterCard: 'https://thewebagency.app/meta-og-image.png'
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/ico',
+      href: '/favicon.ico'
+    }
+  ]
+})
 </script>
 
 <style>
