@@ -11,9 +11,9 @@
         class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
 
       <div class="relative flex flex-col items-center min-h-[90vh] p-4 space-y-6 md:space-y-8 pt-24 md:pt-48">
-        <HeroSection :isScrolled="isScrolled" class="transition-all duration-500" />
-        <CallToAction :isScrolled="isScrolled" />
-        <CtaFeatures :isScrolled="isScrolled" />
+        <HeroSection class="transition-all duration-500" />
+        <CallToAction />
+        <CtaFeatures />
 
         <div class="flex flex-col items-center text-sm justify-center mb-6 md:hidden animate-fade-up">
           <span
@@ -24,10 +24,11 @@
       </div>
     </div>
 
-    <div class="relative -mt-48 md:-mt-64">
+    <div class="relative -mt-48 md:mt-8">
       <DotPattern
         class="absolute inset-0 size-full fill-white/20 [mask-image:radial-gradient(white,transparent_85%)] pointer-events-none" />
-      <SeoSection :isScrolled="isScrolled" />
+      <DividerLine />
+      <SeoSection />
     </div>
 
     <DividerLine />
@@ -263,19 +264,17 @@
           <div class="flex gap-6">
             <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#E70D01] to-[#F77D05] flex-shrink-0"></div>
             <div>
-              <p class="text-gray-300 text-lg mb-4">"The team's ability to transform our vision into reality exceeded
-                our expectations. Their technical expertise and attention to detail made all the difference."</p>
-              <p class="text-white font-mono">John Doe</p>
-              <p class="text-sm text-gray-400">CEO, Tech Company</p>
+              <p class="text-gray-300 text-lg mb-4">"The Web Agency built my business website from the ground up, came out perfect. They took the functions I said it needed to have and turned it into a visually appealing and customer friendly website."</p>
+              <p class="text-white font-mono">Brenden Chapman</p>
+              <p class="text-sm text-gray-400">CEO, Mobile Tire Pro</p>
             </div>
           </div>
           <div class="flex gap-6">
             <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#FF5400] to-[#F77D05] flex-shrink-0"></div>
             <div>
-              <p class="text-gray-300 text-lg mb-4">"Working with them was a game-changer for our online presence. They
-                delivered a website that perfectly captures our brand's essence."</p>
-              <p class="text-white font-mono">Jane Smith</p>
-              <p class="text-sm text-gray-400">Marketing Director, Brand Co</p>
+              <p class="text-gray-300 text-lg mb-4">"We were able to quickly go from concept to a live website quickly. The Web Agency has allowed me to focus on my business without worrying about the development process."</p>
+              <p class="text-white font-mono">Neil Maniar</p>
+              <p class="text-sm text-gray-400">Hampshire Pharmacy</p>
             </div>
           </div>
         </div>
@@ -342,13 +341,36 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  description: 'The Web Agency delivers custom websites and software solutions engineered to drive measurable business growth.',
+  ogTitle: 'The Web Agency | Dev & Design Studio',
+  ogDescription: 'The Web Agency delivers custom websites and software solutions engineered to drive measurable business growth.',
+  ogImage: 'https://thewebagency.app/meta-og-image.png',
+  ogUrl: 'https://thewebagency.app',
+  twitterTitle: 'The Web Agency | Dev & Design Studio',
+  twitterDescription: 'The Web Agency delivers custom websites and software solutions engineered to drive measurable business growth.',
+  twitterImage: 'https://thewebagency.app/meta-og-image.png',
+  twitterCard: 'https://thewebagency.app/meta-og-image.png'
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/ico',
+      href: '/favicon.ico'
+    }
+  ]
+})
+
 import AppHeader from '~/components/layout/appHeader.vue'
 import AppFooter from '~/components/layout/appFooter.vue';
 import SocialProofLogos from '~/components/socialProofLogos.vue'
 
 import { ref, onMounted, onUnmounted } from 'vue'
-
-const isScrolled = ref(false)
 
 const aiSectionRef = ref(null)
 const bigIdeasSectionRef = ref(null)
@@ -375,18 +397,6 @@ onMounted(() => {
   if (bigIdeasSectionRef.value) {
     observer.observe(bigIdeasSectionRef.value)
   }
-})
-
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 100
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
 })
 
 const capabilities = [
