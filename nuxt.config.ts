@@ -28,16 +28,31 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-        
+
         // Apple Touch Icon
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-        
+
         // Android Chrome icons
         { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-chrome-192x192.png' },
         { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/android-chrome-512x512.png' },
-        
+
         // Web Manifest
         { rel: 'manifest', href: '/site.webmanifest' }
+      ],
+      script: [
+        // Google Tag Manager
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=AW-17578186604',
+          async: true
+        },
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17578186604');
+          `
+        }
       ]
     }
   },
