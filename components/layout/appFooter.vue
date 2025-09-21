@@ -37,6 +37,10 @@
           </div>
         </div>
       </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-800/50 flex justify-end mr-32">
+        <NuxtLink to="/privacy" class="text-white text-sm font-mono cursor-pointer z-10">Privacy Policy</NuxtLink>
+      </div>
     </footer>
 </template>
 
