@@ -42,41 +42,42 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-# Block common spam and malicious bots
+# Allow legitimate SEO tools (important for rankings and analysis)
 User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
+Allow: /
 
 User-agent: SemrushBot
-Disallow: /
+Allow: /
 
+User-agent: MJ12bot
+Allow: /
+
+User-agent: BLEXBot
+Allow: /
+
+User-agent: linkdexbot
+Allow: /
+
+User-agent: DataForSeoBot
+Allow: /
+
+User-agent: serpstatbot
+Allow: /
+
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+# Block aggressive/problematic crawlers
 User-agent: dotbot
 Disallow: /
 
-User-agent: Screaming Frog SEO Spider
-Disallow: /
-
 User-agent: SiteAuditBot
-Disallow: /
+Crawl-delay: 30
 
 User-agent: LinkpadBot
-Disallow: /
-
-User-agent: DataForSeoBot
-Disallow: /
-
-User-agent: serpstatbot
-Disallow: /
+Crawl-delay: 30
 
 User-agent: MegaIndex.ru
-Disallow: /
-
-User-agent: BLEXBot
-Disallow: /
-
-User-agent: linkdexbot
 Disallow: /
 
 User-agent: DotBot
@@ -98,7 +99,7 @@ User-agent: MSNBot
 Disallow: /
 
 User-agent: YandexBot
-Disallow: /
+Crawl-delay: 10
 
 # Block email harvesters and content scrapers
 User-agent: EmailCollector
